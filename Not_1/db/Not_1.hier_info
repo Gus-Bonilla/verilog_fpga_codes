@@ -1,0 +1,5 @@
+|Not_1
+c => s.DATAIN
+s <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,21 @@
+|Compuertas
+a => comb~5.IN0
+a => comb~4.IN0
+a => comb~3.IN0
+a => comb~2.IN0
+a => comb~1.IN0
+a => comb~0.IN0
+b => comb~5.IN1
+b => comb~4.IN1
+b => comb~3.IN1
+b => comb~2.IN1
+b => comb~1.IN1
+b => comb~0.IN1
+s1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+s2 <= comb~1.DB_MAX_OUTPUT_PORT_TYPE
+s3 <= comb~2.DB_MAX_OUTPUT_PORT_TYPE
+s4 <= comb~3.DB_MAX_OUTPUT_PORT_TYPE
+s5 <= comb~4.DB_MAX_OUTPUT_PORT_TYPE
+s6 <= comb~5.DB_MAX_OUTPUT_PORT_TYPE
+
+

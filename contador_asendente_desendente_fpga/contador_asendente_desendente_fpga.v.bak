@@ -1,0 +1,13 @@
+module contador_asendente_desendente_fpga (
+
+input clk,dir,rst,
+output s1,s2,s3,s4,s5,s6,s7);
+
+wire w1,w2,w3;
+wire [3:0]bus_4;
+
+div_frec 				conex1 	(.clk(clk),.clk_div(w1));
+state_machine 			conex2 	(.clk(w1),.dir(dir),.rst(rst),.salida(bus_4));
+Deco_4bin_to_7seg_hex 	conex3 	(.a(bus_4[3]),.b(bus_4[2]),.c(bus_4[1]),.d(bus_4[0]),.s1(s1),.s2(s2),.s3(s3),.s4(s4),.s5(s5),.s6(s6),.s7(s7));
+
+endmodule 

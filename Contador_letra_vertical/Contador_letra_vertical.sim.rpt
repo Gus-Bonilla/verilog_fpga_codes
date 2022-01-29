@@ -1,0 +1,348 @@
+Simulator report for Contador_letra_vertical
+Mon Oct 19 08:50:03 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 20.0 us      ;
+; Simulation Netlist Size     ; 84 nodes     ;
+; Simulation Coverage         ;      37.39 % ;
+; Total Number of Transitions ; 20085        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      37.39 % ;
+; Total nodes checked                                 ; 84           ;
+; Total output ports checked                          ; 115          ;
+; Total output ports with complete 1/0-value coverage ; 43           ;
+; Total output ports with no 1/0-value coverage       ; 72           ;
+; Total output ports with no 1-value coverage         ; 72           ;
+; Total output ports with no 0-value coverage         ; 72           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                    ;
++--------------------------------------+--------------------------------------+------------------+
+; Node Name                            ; Output Port Name                     ; Output Port Type ;
++--------------------------------------+--------------------------------------+------------------+
+; |Contador_letra_vertical|Add0~0      ; |Contador_letra_vertical|Add0~0      ; combout          ;
+; |Contador_letra_vertical|Add0~0      ; |Contador_letra_vertical|Add0~1      ; cout             ;
+; |Contador_letra_vertical|Add0~2      ; |Contador_letra_vertical|Add0~2      ; combout          ;
+; |Contador_letra_vertical|Add0~2      ; |Contador_letra_vertical|Add0~3      ; cout             ;
+; |Contador_letra_vertical|Add0~4      ; |Contador_letra_vertical|Add0~4      ; combout          ;
+; |Contador_letra_vertical|Add0~4      ; |Contador_letra_vertical|Add0~5      ; cout             ;
+; |Contador_letra_vertical|Add0~6      ; |Contador_letra_vertical|Add0~6      ; combout          ;
+; |Contador_letra_vertical|Add0~6      ; |Contador_letra_vertical|Add0~7      ; cout             ;
+; |Contador_letra_vertical|Add0~8      ; |Contador_letra_vertical|Add0~8      ; combout          ;
+; |Contador_letra_vertical|Add0~8      ; |Contador_letra_vertical|Add0~9      ; cout             ;
+; |Contador_letra_vertical|Add0~10     ; |Contador_letra_vertical|Add0~10     ; combout          ;
+; |Contador_letra_vertical|Add0~10     ; |Contador_letra_vertical|Add0~11     ; cout             ;
+; |Contador_letra_vertical|Add0~12     ; |Contador_letra_vertical|Add0~12     ; combout          ;
+; |Contador_letra_vertical|Add0~12     ; |Contador_letra_vertical|Add0~13     ; cout             ;
+; |Contador_letra_vertical|Add0~14     ; |Contador_letra_vertical|Add0~14     ; combout          ;
+; |Contador_letra_vertical|Add0~14     ; |Contador_letra_vertical|Add0~15     ; cout             ;
+; |Contador_letra_vertical|Add0~16     ; |Contador_letra_vertical|Add0~16     ; combout          ;
+; |Contador_letra_vertical|Add0~16     ; |Contador_letra_vertical|Add0~17     ; cout             ;
+; |Contador_letra_vertical|Add0~18     ; |Contador_letra_vertical|Add0~18     ; combout          ;
+; |Contador_letra_vertical|contador[9] ; |Contador_letra_vertical|contador[9] ; regout           ;
+; |Contador_letra_vertical|contador[5] ; |Contador_letra_vertical|contador[5] ; regout           ;
+; |Contador_letra_vertical|contador[4] ; |Contador_letra_vertical|contador[4] ; regout           ;
+; |Contador_letra_vertical|contador[1] ; |Contador_letra_vertical|contador[1] ; regout           ;
+; |Contador_letra_vertical|contador[3] ; |Contador_letra_vertical|contador[3] ; regout           ;
+; |Contador_letra_vertical|contador[2] ; |Contador_letra_vertical|contador[2] ; regout           ;
+; |Contador_letra_vertical|always1~1   ; |Contador_letra_vertical|always1~1   ; combout          ;
+; |Contador_letra_vertical|contador[8] ; |Contador_letra_vertical|contador[8] ; regout           ;
+; |Contador_letra_vertical|contador[7] ; |Contador_letra_vertical|contador[7] ; regout           ;
+; |Contador_letra_vertical|Equal0~6    ; |Contador_letra_vertical|Equal0~6    ; combout          ;
+; |Contador_letra_vertical|contador[6] ; |Contador_letra_vertical|contador[6] ; regout           ;
+; |Contador_letra_vertical|Equal0~7    ; |Contador_letra_vertical|Equal0~7    ; combout          ;
+; |Contador_letra_vertical|always1~2   ; |Contador_letra_vertical|always1~2   ; combout          ;
+; |Contador_letra_vertical|contador[0] ; |Contador_letra_vertical|contador[0] ; regout           ;
+; |Contador_letra_vertical|Equal0~8    ; |Contador_letra_vertical|Equal0~8    ; combout          ;
+; |Contador_letra_vertical|Equal0~9    ; |Contador_letra_vertical|Equal0~9    ; combout          ;
+; |Contador_letra_vertical|contador~32 ; |Contador_letra_vertical|contador~32 ; combout          ;
+; |Contador_letra_vertical|contador~33 ; |Contador_letra_vertical|contador~33 ; combout          ;
+; |Contador_letra_vertical|contador~34 ; |Contador_letra_vertical|contador~34 ; combout          ;
+; |Contador_letra_vertical|contador~35 ; |Contador_letra_vertical|contador~35 ; combout          ;
+; |Contador_letra_vertical|contador~36 ; |Contador_letra_vertical|contador~36 ; combout          ;
+; |Contador_letra_vertical|clk_vert    ; |Contador_letra_vertical|clk_vert    ; padio            ;
+; |Contador_letra_vertical|clk         ; |Contador_letra_vertical|clk~corein  ; combout          ;
+; |Contador_letra_vertical|clk~clkctrl ; |Contador_letra_vertical|clk~clkctrl ; outclk           ;
++--------------------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                         ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |Contador_letra_vertical|Add0~18      ; |Contador_letra_vertical|Add0~19      ; cout             ;
+; |Contador_letra_vertical|Add0~20      ; |Contador_letra_vertical|Add0~20      ; combout          ;
+; |Contador_letra_vertical|Add0~20      ; |Contador_letra_vertical|Add0~21      ; cout             ;
+; |Contador_letra_vertical|Add0~22      ; |Contador_letra_vertical|Add0~22      ; combout          ;
+; |Contador_letra_vertical|Add0~22      ; |Contador_letra_vertical|Add0~23      ; cout             ;
+; |Contador_letra_vertical|Add0~24      ; |Contador_letra_vertical|Add0~24      ; combout          ;
+; |Contador_letra_vertical|Add0~24      ; |Contador_letra_vertical|Add0~25      ; cout             ;
+; |Contador_letra_vertical|Add0~26      ; |Contador_letra_vertical|Add0~26      ; combout          ;
+; |Contador_letra_vertical|Add0~26      ; |Contador_letra_vertical|Add0~27      ; cout             ;
+; |Contador_letra_vertical|Add0~28      ; |Contador_letra_vertical|Add0~28      ; combout          ;
+; |Contador_letra_vertical|Add0~28      ; |Contador_letra_vertical|Add0~29      ; cout             ;
+; |Contador_letra_vertical|Add0~30      ; |Contador_letra_vertical|Add0~30      ; combout          ;
+; |Contador_letra_vertical|Add0~30      ; |Contador_letra_vertical|Add0~31      ; cout             ;
+; |Contador_letra_vertical|Add0~32      ; |Contador_letra_vertical|Add0~32      ; combout          ;
+; |Contador_letra_vertical|Add0~32      ; |Contador_letra_vertical|Add0~33      ; cout             ;
+; |Contador_letra_vertical|Add0~34      ; |Contador_letra_vertical|Add0~34      ; combout          ;
+; |Contador_letra_vertical|Add0~34      ; |Contador_letra_vertical|Add0~35      ; cout             ;
+; |Contador_letra_vertical|Add0~36      ; |Contador_letra_vertical|Add0~36      ; combout          ;
+; |Contador_letra_vertical|Add0~36      ; |Contador_letra_vertical|Add0~37      ; cout             ;
+; |Contador_letra_vertical|Add0~38      ; |Contador_letra_vertical|Add0~38      ; combout          ;
+; |Contador_letra_vertical|Add0~38      ; |Contador_letra_vertical|Add0~39      ; cout             ;
+; |Contador_letra_vertical|Add0~40      ; |Contador_letra_vertical|Add0~40      ; combout          ;
+; |Contador_letra_vertical|Add0~40      ; |Contador_letra_vertical|Add0~41      ; cout             ;
+; |Contador_letra_vertical|Add0~42      ; |Contador_letra_vertical|Add0~42      ; combout          ;
+; |Contador_letra_vertical|Add0~42      ; |Contador_letra_vertical|Add0~43      ; cout             ;
+; |Contador_letra_vertical|Add0~44      ; |Contador_letra_vertical|Add0~44      ; combout          ;
+; |Contador_letra_vertical|Add0~44      ; |Contador_letra_vertical|Add0~45      ; cout             ;
+; |Contador_letra_vertical|Add0~46      ; |Contador_letra_vertical|Add0~46      ; combout          ;
+; |Contador_letra_vertical|Add0~46      ; |Contador_letra_vertical|Add0~47      ; cout             ;
+; |Contador_letra_vertical|Add0~48      ; |Contador_letra_vertical|Add0~48      ; combout          ;
+; |Contador_letra_vertical|Add0~48      ; |Contador_letra_vertical|Add0~49      ; cout             ;
+; |Contador_letra_vertical|Add0~50      ; |Contador_letra_vertical|Add0~50      ; combout          ;
+; |Contador_letra_vertical|Add0~50      ; |Contador_letra_vertical|Add0~51      ; cout             ;
+; |Contador_letra_vertical|Add0~52      ; |Contador_letra_vertical|Add0~52      ; combout          ;
+; |Contador_letra_vertical|Add0~52      ; |Contador_letra_vertical|Add0~53      ; cout             ;
+; |Contador_letra_vertical|Add0~54      ; |Contador_letra_vertical|Add0~54      ; combout          ;
+; |Contador_letra_vertical|Add0~54      ; |Contador_letra_vertical|Add0~55      ; cout             ;
+; |Contador_letra_vertical|Add0~56      ; |Contador_letra_vertical|Add0~56      ; combout          ;
+; |Contador_letra_vertical|Add0~56      ; |Contador_letra_vertical|Add0~57      ; cout             ;
+; |Contador_letra_vertical|Add0~58      ; |Contador_letra_vertical|Add0~58      ; combout          ;
+; |Contador_letra_vertical|Add0~58      ; |Contador_letra_vertical|Add0~59      ; cout             ;
+; |Contador_letra_vertical|Add0~60      ; |Contador_letra_vertical|Add0~60      ; combout          ;
+; |Contador_letra_vertical|Add0~60      ; |Contador_letra_vertical|Add0~61      ; cout             ;
+; |Contador_letra_vertical|Add0~62      ; |Contador_letra_vertical|Add0~62      ; combout          ;
+; |Contador_letra_vertical|contador[31] ; |Contador_letra_vertical|contador[31] ; regout           ;
+; |Contador_letra_vertical|contador[30] ; |Contador_letra_vertical|contador[30] ; regout           ;
+; |Contador_letra_vertical|contador[29] ; |Contador_letra_vertical|contador[29] ; regout           ;
+; |Contador_letra_vertical|contador[28] ; |Contador_letra_vertical|contador[28] ; regout           ;
+; |Contador_letra_vertical|Equal0~0     ; |Contador_letra_vertical|Equal0~0     ; combout          ;
+; |Contador_letra_vertical|contador[27] ; |Contador_letra_vertical|contador[27] ; regout           ;
+; |Contador_letra_vertical|contador[26] ; |Contador_letra_vertical|contador[26] ; regout           ;
+; |Contador_letra_vertical|contador[25] ; |Contador_letra_vertical|contador[25] ; regout           ;
+; |Contador_letra_vertical|contador[24] ; |Contador_letra_vertical|contador[24] ; regout           ;
+; |Contador_letra_vertical|Equal0~1     ; |Contador_letra_vertical|Equal0~1     ; combout          ;
+; |Contador_letra_vertical|contador[23] ; |Contador_letra_vertical|contador[23] ; regout           ;
+; |Contador_letra_vertical|contador[22] ; |Contador_letra_vertical|contador[22] ; regout           ;
+; |Contador_letra_vertical|contador[21] ; |Contador_letra_vertical|contador[21] ; regout           ;
+; |Contador_letra_vertical|contador[20] ; |Contador_letra_vertical|contador[20] ; regout           ;
+; |Contador_letra_vertical|Equal0~2     ; |Contador_letra_vertical|Equal0~2     ; combout          ;
+; |Contador_letra_vertical|contador[19] ; |Contador_letra_vertical|contador[19] ; regout           ;
+; |Contador_letra_vertical|contador[18] ; |Contador_letra_vertical|contador[18] ; regout           ;
+; |Contador_letra_vertical|contador[17] ; |Contador_letra_vertical|contador[17] ; regout           ;
+; |Contador_letra_vertical|contador[16] ; |Contador_letra_vertical|contador[16] ; regout           ;
+; |Contador_letra_vertical|Equal0~3     ; |Contador_letra_vertical|Equal0~3     ; combout          ;
+; |Contador_letra_vertical|Equal0~4     ; |Contador_letra_vertical|Equal0~4     ; combout          ;
+; |Contador_letra_vertical|contador[15] ; |Contador_letra_vertical|contador[15] ; regout           ;
+; |Contador_letra_vertical|contador[14] ; |Contador_letra_vertical|contador[14] ; regout           ;
+; |Contador_letra_vertical|contador[13] ; |Contador_letra_vertical|contador[13] ; regout           ;
+; |Contador_letra_vertical|contador[12] ; |Contador_letra_vertical|contador[12] ; regout           ;
+; |Contador_letra_vertical|Equal0~5     ; |Contador_letra_vertical|Equal0~5     ; combout          ;
+; |Contador_letra_vertical|contador[11] ; |Contador_letra_vertical|contador[11] ; regout           ;
+; |Contador_letra_vertical|contador[10] ; |Contador_letra_vertical|contador[10] ; regout           ;
++---------------------------------------+---------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                         ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |Contador_letra_vertical|Add0~18      ; |Contador_letra_vertical|Add0~19      ; cout             ;
+; |Contador_letra_vertical|Add0~20      ; |Contador_letra_vertical|Add0~20      ; combout          ;
+; |Contador_letra_vertical|Add0~20      ; |Contador_letra_vertical|Add0~21      ; cout             ;
+; |Contador_letra_vertical|Add0~22      ; |Contador_letra_vertical|Add0~22      ; combout          ;
+; |Contador_letra_vertical|Add0~22      ; |Contador_letra_vertical|Add0~23      ; cout             ;
+; |Contador_letra_vertical|Add0~24      ; |Contador_letra_vertical|Add0~24      ; combout          ;
+; |Contador_letra_vertical|Add0~24      ; |Contador_letra_vertical|Add0~25      ; cout             ;
+; |Contador_letra_vertical|Add0~26      ; |Contador_letra_vertical|Add0~26      ; combout          ;
+; |Contador_letra_vertical|Add0~26      ; |Contador_letra_vertical|Add0~27      ; cout             ;
+; |Contador_letra_vertical|Add0~28      ; |Contador_letra_vertical|Add0~28      ; combout          ;
+; |Contador_letra_vertical|Add0~28      ; |Contador_letra_vertical|Add0~29      ; cout             ;
+; |Contador_letra_vertical|Add0~30      ; |Contador_letra_vertical|Add0~30      ; combout          ;
+; |Contador_letra_vertical|Add0~30      ; |Contador_letra_vertical|Add0~31      ; cout             ;
+; |Contador_letra_vertical|Add0~32      ; |Contador_letra_vertical|Add0~32      ; combout          ;
+; |Contador_letra_vertical|Add0~32      ; |Contador_letra_vertical|Add0~33      ; cout             ;
+; |Contador_letra_vertical|Add0~34      ; |Contador_letra_vertical|Add0~34      ; combout          ;
+; |Contador_letra_vertical|Add0~34      ; |Contador_letra_vertical|Add0~35      ; cout             ;
+; |Contador_letra_vertical|Add0~36      ; |Contador_letra_vertical|Add0~36      ; combout          ;
+; |Contador_letra_vertical|Add0~36      ; |Contador_letra_vertical|Add0~37      ; cout             ;
+; |Contador_letra_vertical|Add0~38      ; |Contador_letra_vertical|Add0~38      ; combout          ;
+; |Contador_letra_vertical|Add0~38      ; |Contador_letra_vertical|Add0~39      ; cout             ;
+; |Contador_letra_vertical|Add0~40      ; |Contador_letra_vertical|Add0~40      ; combout          ;
+; |Contador_letra_vertical|Add0~40      ; |Contador_letra_vertical|Add0~41      ; cout             ;
+; |Contador_letra_vertical|Add0~42      ; |Contador_letra_vertical|Add0~42      ; combout          ;
+; |Contador_letra_vertical|Add0~42      ; |Contador_letra_vertical|Add0~43      ; cout             ;
+; |Contador_letra_vertical|Add0~44      ; |Contador_letra_vertical|Add0~44      ; combout          ;
+; |Contador_letra_vertical|Add0~44      ; |Contador_letra_vertical|Add0~45      ; cout             ;
+; |Contador_letra_vertical|Add0~46      ; |Contador_letra_vertical|Add0~46      ; combout          ;
+; |Contador_letra_vertical|Add0~46      ; |Contador_letra_vertical|Add0~47      ; cout             ;
+; |Contador_letra_vertical|Add0~48      ; |Contador_letra_vertical|Add0~48      ; combout          ;
+; |Contador_letra_vertical|Add0~48      ; |Contador_letra_vertical|Add0~49      ; cout             ;
+; |Contador_letra_vertical|Add0~50      ; |Contador_letra_vertical|Add0~50      ; combout          ;
+; |Contador_letra_vertical|Add0~50      ; |Contador_letra_vertical|Add0~51      ; cout             ;
+; |Contador_letra_vertical|Add0~52      ; |Contador_letra_vertical|Add0~52      ; combout          ;
+; |Contador_letra_vertical|Add0~52      ; |Contador_letra_vertical|Add0~53      ; cout             ;
+; |Contador_letra_vertical|Add0~54      ; |Contador_letra_vertical|Add0~54      ; combout          ;
+; |Contador_letra_vertical|Add0~54      ; |Contador_letra_vertical|Add0~55      ; cout             ;
+; |Contador_letra_vertical|Add0~56      ; |Contador_letra_vertical|Add0~56      ; combout          ;
+; |Contador_letra_vertical|Add0~56      ; |Contador_letra_vertical|Add0~57      ; cout             ;
+; |Contador_letra_vertical|Add0~58      ; |Contador_letra_vertical|Add0~58      ; combout          ;
+; |Contador_letra_vertical|Add0~58      ; |Contador_letra_vertical|Add0~59      ; cout             ;
+; |Contador_letra_vertical|Add0~60      ; |Contador_letra_vertical|Add0~60      ; combout          ;
+; |Contador_letra_vertical|Add0~60      ; |Contador_letra_vertical|Add0~61      ; cout             ;
+; |Contador_letra_vertical|Add0~62      ; |Contador_letra_vertical|Add0~62      ; combout          ;
+; |Contador_letra_vertical|contador[31] ; |Contador_letra_vertical|contador[31] ; regout           ;
+; |Contador_letra_vertical|contador[30] ; |Contador_letra_vertical|contador[30] ; regout           ;
+; |Contador_letra_vertical|contador[29] ; |Contador_letra_vertical|contador[29] ; regout           ;
+; |Contador_letra_vertical|contador[28] ; |Contador_letra_vertical|contador[28] ; regout           ;
+; |Contador_letra_vertical|Equal0~0     ; |Contador_letra_vertical|Equal0~0     ; combout          ;
+; |Contador_letra_vertical|contador[27] ; |Contador_letra_vertical|contador[27] ; regout           ;
+; |Contador_letra_vertical|contador[26] ; |Contador_letra_vertical|contador[26] ; regout           ;
+; |Contador_letra_vertical|contador[25] ; |Contador_letra_vertical|contador[25] ; regout           ;
+; |Contador_letra_vertical|contador[24] ; |Contador_letra_vertical|contador[24] ; regout           ;
+; |Contador_letra_vertical|Equal0~1     ; |Contador_letra_vertical|Equal0~1     ; combout          ;
+; |Contador_letra_vertical|contador[23] ; |Contador_letra_vertical|contador[23] ; regout           ;
+; |Contador_letra_vertical|contador[22] ; |Contador_letra_vertical|contador[22] ; regout           ;
+; |Contador_letra_vertical|contador[21] ; |Contador_letra_vertical|contador[21] ; regout           ;
+; |Contador_letra_vertical|contador[20] ; |Contador_letra_vertical|contador[20] ; regout           ;
+; |Contador_letra_vertical|Equal0~2     ; |Contador_letra_vertical|Equal0~2     ; combout          ;
+; |Contador_letra_vertical|contador[19] ; |Contador_letra_vertical|contador[19] ; regout           ;
+; |Contador_letra_vertical|contador[18] ; |Contador_letra_vertical|contador[18] ; regout           ;
+; |Contador_letra_vertical|contador[17] ; |Contador_letra_vertical|contador[17] ; regout           ;
+; |Contador_letra_vertical|contador[16] ; |Contador_letra_vertical|contador[16] ; regout           ;
+; |Contador_letra_vertical|Equal0~3     ; |Contador_letra_vertical|Equal0~3     ; combout          ;
+; |Contador_letra_vertical|Equal0~4     ; |Contador_letra_vertical|Equal0~4     ; combout          ;
+; |Contador_letra_vertical|contador[15] ; |Contador_letra_vertical|contador[15] ; regout           ;
+; |Contador_letra_vertical|contador[14] ; |Contador_letra_vertical|contador[14] ; regout           ;
+; |Contador_letra_vertical|contador[13] ; |Contador_letra_vertical|contador[13] ; regout           ;
+; |Contador_letra_vertical|contador[12] ; |Contador_letra_vertical|contador[12] ; regout           ;
+; |Contador_letra_vertical|Equal0~5     ; |Contador_letra_vertical|Equal0~5     ; combout          ;
+; |Contador_letra_vertical|contador[11] ; |Contador_letra_vertical|contador[11] ; regout           ;
+; |Contador_letra_vertical|contador[10] ; |Contador_letra_vertical|contador[10] ; regout           ;
++---------------------------------------+---------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Oct 19 08:50:02 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Contador_letra_vertical -c Contador_letra_vertical
+Info: Using vector source file "F:/User Gustavo/Documentos/Proyectos Aistente de Diseño Electronico/Quartus_2/Verilog/Contador_letra_vertical/Contador_letra_vertical.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      37.39 %
+Info: Number of transitions in simulation is 20085
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 178 megabytes
+    Info: Processing ended: Mon Oct 19 08:50:03 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

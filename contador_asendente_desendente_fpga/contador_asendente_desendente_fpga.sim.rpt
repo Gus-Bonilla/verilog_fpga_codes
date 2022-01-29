@@ -1,0 +1,512 @@
+Simulator report for contador_asendente_desendente_fpga
+Tue Oct 20 09:27:35 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 5.0 us       ;
+; Simulation Netlist Size     ; 155 nodes    ;
+; Simulation Coverage         ;       9.68 % ;
+; Total Number of Transitions ; 315          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       9.68 % ;
+; Total nodes checked                                 ; 155          ;
+; Total output ports checked                          ; 186          ;
+; Total output ports with complete 1/0-value coverage ; 18           ;
+; Total output ports with no 1/0-value coverage       ; 165          ;
+; Total output ports with no 1-value coverage         ; 167          ;
+; Total output ports with no 0-value coverage         ; 166          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                          ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------+
+; Node Name                                                       ; Output Port Name                                                ; Output Port Type ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------+
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~0      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~0      ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~0      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~1      ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~2      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~2      ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~2      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~3      ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~4      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~4      ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~4      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~5      ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~6      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~6      ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~6      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~7      ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~8      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~8      ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~8      ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~9      ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~10     ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~10     ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[3] ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[3] ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[2] ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[2] ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[1] ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[1] ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~1    ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~1    ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[0] ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[0] ; regout           ;
+; |contador_asendente_desendente_fpga|clk                         ; |contador_asendente_desendente_fpga|clk~corein                  ; combout          ;
+; |contador_asendente_desendente_fpga|clk~clkctrl                 ; |contador_asendente_desendente_fpga|clk~clkctrl                 ; outclk           ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                             ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; Node Name                                                               ; Output Port Name                                                        ; Output Port Type ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~10             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~11             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~12             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~12             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~12             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~13             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~14             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~14             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~14             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~15             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~16             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~16             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~16             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~17             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~18             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~18             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~18             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~19             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~20             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~20             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~20             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~21             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~22             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~22             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~22             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~23             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~24             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~24             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~24             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~25             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~26             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~26             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~26             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~27             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~28             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~28             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~28             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~29             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~30             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~30             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~30             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~31             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~32             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~32             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~32             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~33             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~34             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~34             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~34             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~35             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~36             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~36             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~36             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~37             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~38             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~38             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~38             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~39             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~40             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~40             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~40             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~41             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~42             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~42             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~42             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~43             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~44             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~44             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~44             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~45             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~46             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~46             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~46             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~47             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~48             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~48             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~48             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~49             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~50             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~50             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~50             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~51             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~52             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~52             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~52             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~53             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~54             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~54             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~54             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~55             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~56             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~56             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~56             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~57             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~58             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~58             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~58             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~59             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~60             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~60             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~60             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~61             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~62             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~62             ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.six      ; |contador_asendente_desendente_fpga|state_machine:conex2|state.six      ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.four     ; |contador_asendente_desendente_fpga|state_machine:conex2|state.four     ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.twelve   ; |contador_asendente_desendente_fpga|state_machine:conex2|state.twelve   ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19~8     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19~8     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.fourteen ; |contador_asendente_desendente_fpga|state_machine:conex2|state.fourteen ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.zero     ; |contador_asendente_desendente_fpga|state_machine:conex2|state.zero     ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.eight    ; |contador_asendente_desendente_fpga|state_machine:conex2|state.eight    ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.two      ; |contador_asendente_desendente_fpga|state_machine:conex2|state.two      ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.ten      ; |contador_asendente_desendente_fpga|state_machine:conex2|state.ten      ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19~9     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19~9     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19       ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19       ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.one      ; |contador_asendente_desendente_fpga|state_machine:conex2|state.one      ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.nine     ; |contador_asendente_desendente_fpga|state_machine:conex2|state.nine     ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr17~2     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr17~2     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.three    ; |contador_asendente_desendente_fpga|state_machine:conex2|state.three    ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.eleven   ; |contador_asendente_desendente_fpga|state_machine:conex2|state.eleven   ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr17       ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr17       ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.seven    ; |contador_asendente_desendente_fpga|state_machine:conex2|state.seven    ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.five     ; |contador_asendente_desendente_fpga|state_machine:conex2|state.five     ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18~4     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18~4     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr16~1     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr16~1     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr16       ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr16       ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.thirteen ; |contador_asendente_desendente_fpga|state_machine:conex2|state.thirteen ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18~5     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18~5     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18       ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18       ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s1~13  ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s1~13  ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.fiveteen ; |contador_asendente_desendente_fpga|state_machine:conex2|state.fiveteen ; regout           ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s2~12  ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s2~12  ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s2~13  ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s2~13  ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s3~7   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s3~7   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s4~11  ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s4~11  ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~5   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~5   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s5~7   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s5~7   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s5~8   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s5~8   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s6~8   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s6~8   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s6~9   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s6~9   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~6   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~6   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~7   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~7   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector6~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector6~0    ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div             ; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div             ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector4~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector4~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector12~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector12~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector14~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector14~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector0~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector0~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector8~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector8~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector2~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector2~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector10~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector10~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector1~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector1~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector9~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector9~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector3~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector3~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector11~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector11~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector7~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector7~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector5~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector5~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector13~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector13~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector15~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector15~0   ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[6]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[6]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[8]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[8]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[7]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[7]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[5]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[5]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~0            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~0            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[11]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[11]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[9]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[9]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[10]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[10]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~2            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~2            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[12]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[12]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[13]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[13]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[14]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[14]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[15]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[15]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~3            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~3            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~4            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~4            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[16]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[16]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[18]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[18]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[19]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[19]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[17]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[17]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~5            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~5            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[20]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[20]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[21]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[21]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[22]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[22]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[23]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[23]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~6            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~6            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[24]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[24]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[25]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[25]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[26]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[26]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[27]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[27]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~7            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~7            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[28]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[28]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[29]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[29]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[30]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[30]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[31]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[31]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~8            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~8            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~9            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~9            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div~0           ; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div~0           ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~32         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~32         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~33         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~33         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~34         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~34         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~35         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~35         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~36         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~36         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~37         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~37         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~38         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~38         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~39         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~39         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~40         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~40         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~41         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~41         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~42         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~42         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~43         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~43         ; combout          ;
+; |contador_asendente_desendente_fpga|s1                                  ; |contador_asendente_desendente_fpga|s1                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s2                                  ; |contador_asendente_desendente_fpga|s2                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s3                                  ; |contador_asendente_desendente_fpga|s3                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s4                                  ; |contador_asendente_desendente_fpga|s4                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s5                                  ; |contador_asendente_desendente_fpga|s5                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s6                                  ; |contador_asendente_desendente_fpga|s6                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s7                                  ; |contador_asendente_desendente_fpga|s7                                  ; padio            ;
+; |contador_asendente_desendente_fpga|dir                                 ; |contador_asendente_desendente_fpga|dir~corein                          ; combout          ;
+; |contador_asendente_desendente_fpga|rst                                 ; |contador_asendente_desendente_fpga|rst~corein                          ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div~clkctrl     ; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div~clkctrl     ; outclk           ;
+; |contador_asendente_desendente_fpga|rst~clkctrl                         ; |contador_asendente_desendente_fpga|rst~clkctrl                         ; outclk           ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                             ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; Node Name                                                               ; Output Port Name                                                        ; Output Port Type ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~10             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~11             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~12             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~12             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~12             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~13             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~14             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~14             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~14             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~15             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~16             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~16             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~16             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~17             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~18             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~18             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~18             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~19             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~20             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~20             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~20             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~21             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~22             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~22             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~22             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~23             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~24             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~24             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~24             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~25             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~26             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~26             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~26             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~27             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~28             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~28             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~28             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~29             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~30             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~30             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~30             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~31             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~32             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~32             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~32             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~33             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~34             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~34             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~34             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~35             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~36             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~36             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~36             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~37             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~38             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~38             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~38             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~39             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~40             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~40             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~40             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~41             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~42             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~42             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~42             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~43             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~44             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~44             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~44             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~45             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~46             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~46             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~46             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~47             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~48             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~48             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~48             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~49             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~50             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~50             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~50             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~51             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~52             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~52             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~52             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~53             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~54             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~54             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~54             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~55             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~56             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~56             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~56             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~57             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~58             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~58             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~58             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~59             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~60             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~60             ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~60             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~61             ; cout             ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~62             ; |contador_asendente_desendente_fpga|div_frec:conex1|Add0~62             ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.six      ; |contador_asendente_desendente_fpga|state_machine:conex2|state.six      ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.four     ; |contador_asendente_desendente_fpga|state_machine:conex2|state.four     ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.twelve   ; |contador_asendente_desendente_fpga|state_machine:conex2|state.twelve   ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19~8     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19~8     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.fourteen ; |contador_asendente_desendente_fpga|state_machine:conex2|state.fourteen ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.zero     ; |contador_asendente_desendente_fpga|state_machine:conex2|state.zero     ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.eight    ; |contador_asendente_desendente_fpga|state_machine:conex2|state.eight    ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.two      ; |contador_asendente_desendente_fpga|state_machine:conex2|state.two      ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.ten      ; |contador_asendente_desendente_fpga|state_machine:conex2|state.ten      ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19~9     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19~9     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19       ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr19       ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.one      ; |contador_asendente_desendente_fpga|state_machine:conex2|state.one      ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.nine     ; |contador_asendente_desendente_fpga|state_machine:conex2|state.nine     ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr17~2     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr17~2     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.three    ; |contador_asendente_desendente_fpga|state_machine:conex2|state.three    ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.eleven   ; |contador_asendente_desendente_fpga|state_machine:conex2|state.eleven   ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr17       ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr17       ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.seven    ; |contador_asendente_desendente_fpga|state_machine:conex2|state.seven    ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.five     ; |contador_asendente_desendente_fpga|state_machine:conex2|state.five     ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18~4     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18~4     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr16~1     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr16~1     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr16       ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr16       ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.thirteen ; |contador_asendente_desendente_fpga|state_machine:conex2|state.thirteen ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18~5     ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18~5     ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18       ; |contador_asendente_desendente_fpga|state_machine:conex2|WideOr18       ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s1~13  ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s1~13  ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|state.fiveteen ; |contador_asendente_desendente_fpga|state_machine:conex2|state.fiveteen ; regout           ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s2~12  ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s2~12  ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s2~13  ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s2~13  ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s3~7   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s3~7   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s4~11  ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s4~11  ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~5   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~5   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s5~7   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s5~7   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s5~8   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s5~8   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s6~8   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s6~8   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s6~9   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s6~9   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~6   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~6   ; combout          ;
+; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~7   ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3|s7~7   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector6~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector6~0    ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div             ; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div             ; regout           ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector4~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector4~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector12~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector12~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector14~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector14~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector0~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector0~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector8~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector8~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector2~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector2~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector10~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector10~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector1~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector1~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector9~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector9~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector3~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector3~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector11~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector11~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector7~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector7~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector5~0    ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector5~0    ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector13~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector13~0   ; combout          ;
+; |contador_asendente_desendente_fpga|state_machine:conex2|Selector15~0   ; |contador_asendente_desendente_fpga|state_machine:conex2|Selector15~0   ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[6]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[6]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[8]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[8]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[7]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[7]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[5]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[5]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~0            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~0            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[4]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[4]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[11]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[11]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[9]         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[9]         ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[10]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[10]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~2            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~2            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[12]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[12]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[13]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[13]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[14]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[14]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[15]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[15]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~3            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~3            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~4            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~4            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[16]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[16]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[18]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[18]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[19]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[19]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[17]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[17]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~5            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~5            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[20]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[20]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[21]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[21]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[22]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[22]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[23]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[23]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~6            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~6            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[24]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[24]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[25]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[25]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[26]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[26]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[27]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[27]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~7            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~7            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[28]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[28]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[29]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[29]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[30]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[30]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador[31]        ; |contador_asendente_desendente_fpga|div_frec:conex1|contador[31]        ; regout           ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~8            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~8            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~9            ; |contador_asendente_desendente_fpga|div_frec:conex1|Equal0~9            ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div~0           ; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div~0           ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~32         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~32         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~33         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~33         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~34         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~34         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~35         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~35         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~36         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~36         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~37         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~37         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~38         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~38         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~39         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~39         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~40         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~40         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~41         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~41         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~42         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~42         ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|contador~43         ; |contador_asendente_desendente_fpga|div_frec:conex1|contador~43         ; combout          ;
+; |contador_asendente_desendente_fpga|s1                                  ; |contador_asendente_desendente_fpga|s1                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s2                                  ; |contador_asendente_desendente_fpga|s2                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s3                                  ; |contador_asendente_desendente_fpga|s3                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s4                                  ; |contador_asendente_desendente_fpga|s4                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s5                                  ; |contador_asendente_desendente_fpga|s5                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s6                                  ; |contador_asendente_desendente_fpga|s6                                  ; padio            ;
+; |contador_asendente_desendente_fpga|s7                                  ; |contador_asendente_desendente_fpga|s7                                  ; padio            ;
+; |contador_asendente_desendente_fpga|dir                                 ; |contador_asendente_desendente_fpga|dir~corein                          ; combout          ;
+; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div~clkctrl     ; |contador_asendente_desendente_fpga|div_frec:conex1|clk_div~clkctrl     ; outclk           ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Oct 20 09:27:35 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off contador_asendente_desendente_fpga -c contador_asendente_desendente_fpga
+Info: Using vector source file "F:/User Gustavo/Documentos/Proyectos Aistente de Diseño Electronico/Quartus_2/Verilog/contador_asendente_desendente_fpga/contador_asendente_desendente_fpga.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       9.68 %
+Info: Number of transitions in simulation is 315
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 178 megabytes
+    Info: Processing ended: Tue Oct 20 09:27:35 2015
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

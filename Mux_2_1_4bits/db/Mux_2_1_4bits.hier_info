@@ -1,0 +1,19 @@
+|Mux_2_1_4bits
+a[0] => s~3.DATAB
+a[1] => s~2.DATAB
+a[2] => s~1.DATAB
+a[3] => s~0.DATAB
+b[0] => s~3.DATAA
+b[1] => s~2.DATAA
+b[2] => s~1.DATAA
+b[3] => s~0.DATAA
+c => s~3.OUTPUTSELECT
+c => s~2.OUTPUTSELECT
+c => s~1.OUTPUTSELECT
+c => s~0.OUTPUTSELECT
+s[0] <= s~3.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s~2.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

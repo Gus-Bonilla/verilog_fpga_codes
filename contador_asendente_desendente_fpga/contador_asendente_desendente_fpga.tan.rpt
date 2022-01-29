@@ -1,0 +1,593 @@
+Classic Timing Analyzer report for contador_asendente_desendente_fpga
+Fri Oct 09 08:15:53 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+-------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                            ; To                                  ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+-------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; -3.038 ns                        ; dir                             ; state_machine:conex2|state.fourteen ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 16.692 ns                        ; state_machine:conex2|state.zero ; s6                                  ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 3.528 ns                         ; dir                             ; state_machine:conex2|state.ten      ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 208.68 MHz ( period = 4.792 ns ) ; div_frec:conex1|contador[0]     ; div_frec:conex1|contador[24]        ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                 ;                                     ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+-------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                      ;
++-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                         ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 208.68 MHz ( period = 4.792 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 4.554 ns                ;
+; N/A                                     ; 212.09 MHz ( period = 4.715 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 4.477 ns                ;
+; N/A                                     ; 215.52 MHz ( period = 4.640 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 4.402 ns                ;
+; N/A                                     ; 217.20 MHz ( period = 4.604 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.365 ns                ;
+; N/A                                     ; 217.53 MHz ( period = 4.597 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 4.359 ns                ;
+; N/A                                     ; 219.88 MHz ( period = 4.548 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 4.309 ns                ;
+; N/A                                     ; 220.36 MHz ( period = 4.538 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 4.299 ns                ;
+; N/A                                     ; 220.90 MHz ( period = 4.527 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.288 ns                ;
+; N/A                                     ; 221.14 MHz ( period = 4.522 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 4.283 ns                ;
+; N/A                                     ; 223.16 MHz ( period = 4.481 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 4.243 ns                ;
+; N/A                                     ; 224.16 MHz ( period = 4.461 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 4.222 ns                ;
+; N/A                                     ; 224.62 MHz ( period = 4.452 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.213 ns                ;
+; N/A                                     ; 224.97 MHz ( period = 4.445 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 4.206 ns                ;
+; N/A                                     ; 225.38 MHz ( period = 4.437 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 4.199 ns                ;
+; N/A                                     ; 226.81 MHz ( period = 4.409 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.170 ns                ;
+; N/A                                     ; 227.43 MHz ( period = 4.397 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 4.097 ns                ;
+; N/A                                     ; 228.00 MHz ( period = 4.386 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 4.147 ns                ;
+; N/A                                     ; 228.83 MHz ( period = 4.370 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 4.131 ns                ;
+; N/A                                     ; 228.94 MHz ( period = 4.368 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 4.129 ns                ;
+; N/A                                     ; 229.36 MHz ( period = 4.360 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.120 ns                ;
+; N/A                                     ; 230.26 MHz ( period = 4.343 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 4.104 ns                ;
+; N/A                                     ; 230.31 MHz ( period = 4.342 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 4.103 ns                ;
+; N/A                                     ; 230.41 MHz ( period = 4.340 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.101 ns                ;
+; N/A                                     ; 230.57 MHz ( period = 4.337 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 4.098 ns                ;
+; N/A                                     ; 231.11 MHz ( period = 4.327 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 4.088 ns                ;
+; N/A                                     ; 231.75 MHz ( period = 4.315 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[31] ; clk        ; clk      ; None                        ; None                      ; 4.078 ns                ;
+; N/A                                     ; 232.29 MHz ( period = 4.305 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 4.005 ns                ;
+; N/A                                     ; 232.40 MHz ( period = 4.303 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 4.064 ns                ;
+; N/A                                     ; 232.61 MHz ( period = 4.299 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 4.060 ns                ;
+; N/A                                     ; 232.88 MHz ( period = 4.294 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 4.054 ns                ;
+; N/A                                     ; 232.94 MHz ( period = 4.293 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.054 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.05 MHz ( period = 4.291 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 4.052 ns                ;
+; N/A                                     ; 233.75 MHz ( period = 4.278 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 4.038 ns                ;
+; N/A                                     ; 235.29 MHz ( period = 4.250 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 4.011 ns                ;
+; N/A                                     ; 235.35 MHz ( period = 4.249 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.010 ns                ;
+; N/A                                     ; 235.40 MHz ( period = 4.248 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 4.009 ns                ;
+; N/A                                     ; 235.40 MHz ( period = 4.248 ns )                    ; div_frec:conex1|contador[7]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 4.010 ns                ;
+; N/A                                     ; 235.57 MHz ( period = 4.245 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 4.006 ns                ;
+; N/A                                     ; 235.79 MHz ( period = 4.241 ns )                    ; div_frec:conex1|contador[17] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.939 ns                ;
+; N/A                                     ; 235.96 MHz ( period = 4.238 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[31] ; clk        ; clk      ; None                        ; None                      ; 4.001 ns                ;
+; N/A                                     ; 236.13 MHz ( period = 4.235 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[30] ; clk        ; clk      ; None                        ; None                      ; 3.998 ns                ;
+; N/A                                     ; 236.57 MHz ( period = 4.227 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.988 ns                ;
+; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.977 ns                ;
+; N/A                                     ; 237.30 MHz ( period = 4.214 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.975 ns                ;
+; N/A                                     ; 237.47 MHz ( period = 4.211 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.972 ns                ;
+; N/A                                     ; 237.47 MHz ( period = 4.211 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.972 ns                ;
+; N/A                                     ; 237.70 MHz ( period = 4.207 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.968 ns                ;
+; N/A                                     ; 238.89 MHz ( period = 4.186 ns )                    ; div_frec:conex1|contador[17] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.945 ns                ;
+; N/A                                     ; 239.01 MHz ( period = 4.184 ns )                    ; div_frec:conex1|contador[17] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.943 ns                ;
+; N/A                                     ; 239.06 MHz ( period = 4.183 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.944 ns                ;
+; N/A                                     ; 239.18 MHz ( period = 4.181 ns )                    ; div_frec:conex1|contador[17] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.940 ns                ;
+; N/A                                     ; 239.64 MHz ( period = 4.173 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.934 ns                ;
+; N/A                                     ; 239.98 MHz ( period = 4.167 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.928 ns                ;
+; N/A                                     ; 240.21 MHz ( period = 4.163 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[31] ; clk        ; clk      ; None                        ; None                      ; 3.926 ns                ;
+; N/A                                     ; 240.50 MHz ( period = 4.158 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[30] ; clk        ; clk      ; None                        ; None                      ; 3.921 ns                ;
+; N/A                                     ; 240.67 MHz ( period = 4.155 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[29] ; clk        ; clk      ; None                        ; None                      ; 3.918 ns                ;
+; N/A                                     ; 241.14 MHz ( period = 4.147 ns )                    ; div_frec:conex1|contador[17] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.906 ns                ;
+; N/A                                     ; 241.37 MHz ( period = 4.143 ns )                    ; div_frec:conex1|contador[17] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.902 ns                ;
+; N/A                                     ; 241.55 MHz ( period = 4.140 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[16] ; clk        ; clk      ; None                        ; None                      ; 3.902 ns                ;
+; N/A                                     ; 241.60 MHz ( period = 4.139 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.900 ns                ;
+; N/A                                     ; 242.48 MHz ( period = 4.124 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.884 ns                ;
+; N/A                                     ; 242.72 MHz ( period = 4.120 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[31] ; clk        ; clk      ; None                        ; None                      ; 3.883 ns                ;
+; N/A                                     ; 243.78 MHz ( period = 4.102 ns )                    ; div_frec:conex1|contador[8]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.864 ns                ;
+; N/A                                     ; 243.96 MHz ( period = 4.099 ns )                    ; div_frec:conex1|contador[29] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.797 ns                ;
+; N/A                                     ; 244.14 MHz ( period = 4.096 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.857 ns                ;
+; N/A                                     ; 244.92 MHz ( period = 4.083 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[30] ; clk        ; clk      ; None                        ; None                      ; 3.846 ns                ;
+; N/A                                     ; 245.22 MHz ( period = 4.078 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[29] ; clk        ; clk      ; None                        ; None                      ; 3.841 ns                ;
+; N/A                                     ; 245.40 MHz ( period = 4.075 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[28] ; clk        ; clk      ; None                        ; None                      ; 3.838 ns                ;
+; N/A                                     ; 245.64 MHz ( period = 4.071 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[31] ; clk        ; clk      ; None                        ; None                      ; 3.833 ns                ;
+; N/A                                     ; 246.12 MHz ( period = 4.063 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[16] ; clk        ; clk      ; None                        ; None                      ; 3.825 ns                ;
+; N/A                                     ; 246.31 MHz ( period = 4.060 ns )                    ; div_frec:conex1|contador[7]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.821 ns                ;
+; N/A                                     ; 246.49 MHz ( period = 4.057 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.818 ns                ;
+; N/A                                     ; 246.79 MHz ( period = 4.052 ns )                    ; div_frec:conex1|contador[11] ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.813 ns                ;
+; N/A                                     ; 247.10 MHz ( period = 4.047 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.807 ns                ;
+; N/A                                     ; 247.28 MHz ( period = 4.044 ns )                    ; div_frec:conex1|contador[29] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.803 ns                ;
+; N/A                                     ; 247.40 MHz ( period = 4.042 ns )                    ; div_frec:conex1|contador[29] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.801 ns                ;
+; N/A                                     ; 247.52 MHz ( period = 4.040 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[30] ; clk        ; clk      ; None                        ; None                      ; 3.803 ns                ;
+; N/A                                     ; 247.52 MHz ( period = 4.040 ns )                    ; div_frec:conex1|contador[22] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.740 ns                ;
+; N/A                                     ; 247.59 MHz ( period = 4.039 ns )                    ; div_frec:conex1|contador[29] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.798 ns                ;
+; N/A                                     ; 248.51 MHz ( period = 4.024 ns )                    ; div_frec:conex1|contador[31] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.722 ns                ;
+; N/A                                     ; 249.19 MHz ( period = 4.013 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.774 ns                ;
+; N/A                                     ; 249.69 MHz ( period = 4.005 ns )                    ; div_frec:conex1|contador[29] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.764 ns                ;
+; N/A                                     ; 249.75 MHz ( period = 4.004 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[31] ; clk        ; clk      ; None                        ; None                      ; 3.767 ns                ;
+; N/A                                     ; 249.81 MHz ( period = 4.003 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[29] ; clk        ; clk      ; None                        ; None                      ; 3.766 ns                ;
+; N/A                                     ; 249.94 MHz ( period = 4.001 ns )                    ; div_frec:conex1|contador[29] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.760 ns                ;
+; N/A                                     ; 250.13 MHz ( period = 3.998 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[28] ; clk        ; clk      ; None                        ; None                      ; 3.761 ns                ;
+; N/A                                     ; 250.31 MHz ( period = 3.995 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[27] ; clk        ; clk      ; None                        ; None                      ; 3.758 ns                ;
+; N/A                                     ; 250.38 MHz ( period = 3.994 ns )                    ; div_frec:conex1|contador[7]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.755 ns                ;
+; N/A                                     ; 250.56 MHz ( period = 3.991 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[30] ; clk        ; clk      ; None                        ; None                      ; 3.753 ns                ;
+; N/A                                     ; 250.75 MHz ( period = 3.988 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[16] ; clk        ; clk      ; None                        ; None                      ; 3.750 ns                ;
+; N/A                                     ; 250.88 MHz ( period = 3.986 ns )                    ; div_frec:conex1|contador[20] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.686 ns                ;
+; N/A                                     ; 250.94 MHz ( period = 3.985 ns )                    ; div_frec:conex1|contador[22] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.746 ns                ;
+; N/A                                     ; 251.07 MHz ( period = 3.983 ns )                    ; div_frec:conex1|contador[22] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.744 ns                ;
+; N/A                                     ; 251.07 MHz ( period = 3.983 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.683 ns                ;
+; N/A                                     ; 251.13 MHz ( period = 3.982 ns )                    ; div_frec:conex1|contador[9]  ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.744 ns                ;
+; N/A                                     ; 251.26 MHz ( period = 3.980 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.741 ns                ;
+; N/A                                     ; 251.26 MHz ( period = 3.980 ns )                    ; div_frec:conex1|contador[22] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.741 ns                ;
+; N/A                                     ; 251.38 MHz ( period = 3.978 ns )                    ; div_frec:conex1|contador[7]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.739 ns                ;
+; N/A                                     ; 251.64 MHz ( period = 3.974 ns )                    ; div_frec:conex1|contador[12] ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.735 ns                ;
+; N/A                                     ; 251.95 MHz ( period = 3.969 ns )                    ; div_frec:conex1|contador[31] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.728 ns                ;
+; N/A                                     ; 252.08 MHz ( period = 3.967 ns )                    ; div_frec:conex1|contador[31] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.726 ns                ;
+; N/A                                     ; 252.27 MHz ( period = 3.964 ns )                    ; div_frec:conex1|contador[31] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.723 ns                ;
+; N/A                                     ; 252.53 MHz ( period = 3.960 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[29] ; clk        ; clk      ; None                        ; None                      ; 3.723 ns                ;
+; N/A                                     ; 252.53 MHz ( period = 3.960 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[31] ; clk        ; clk      ; None                        ; None                      ; 3.723 ns                ;
+; N/A                                     ; 253.42 MHz ( period = 3.946 ns )                    ; div_frec:conex1|contador[22] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.707 ns                ;
+; N/A                                     ; 253.49 MHz ( period = 3.945 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[16] ; clk        ; clk      ; None                        ; None                      ; 3.707 ns                ;
+; N/A                                     ; 253.68 MHz ( period = 3.942 ns )                    ; div_frec:conex1|contador[22] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.703 ns                ;
+; N/A                                     ; 253.68 MHz ( period = 3.942 ns )                    ; div_frec:conex1|contador[10] ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.704 ns                ;
+; N/A                                     ; 253.68 MHz ( period = 3.942 ns )                    ; div_frec:conex1|contador[25] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.640 ns                ;
+; N/A                                     ; 253.81 MHz ( period = 3.940 ns )                    ; div_frec:conex1|contador[16] ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.701 ns                ;
+; N/A                                     ; 254.07 MHz ( period = 3.936 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.697 ns                ;
+; N/A                                     ; 254.39 MHz ( period = 3.931 ns )                    ; div_frec:conex1|contador[20] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.692 ns                ;
+; N/A                                     ; 254.45 MHz ( period = 3.930 ns )                    ; div_frec:conex1|contador[31] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.689 ns                ;
+; N/A                                     ; 254.52 MHz ( period = 3.929 ns )                    ; div_frec:conex1|contador[20] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.690 ns                ;
+; N/A                                     ; 254.71 MHz ( period = 3.926 ns )                    ; div_frec:conex1|contador[31] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.685 ns                ;
+; N/A                                     ; 254.71 MHz ( period = 3.926 ns )                    ; div_frec:conex1|contador[20] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.687 ns                ;
+; N/A                                     ; 254.84 MHz ( period = 3.924 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[30] ; clk        ; clk      ; None                        ; None                      ; 3.687 ns                ;
+; N/A                                     ; 254.91 MHz ( period = 3.923 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[28] ; clk        ; clk      ; None                        ; None                      ; 3.686 ns                ;
+; N/A                                     ; 255.23 MHz ( period = 3.918 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[27] ; clk        ; clk      ; None                        ; None                      ; 3.681 ns                ;
+; N/A                                     ; 255.43 MHz ( period = 3.915 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[26] ; clk        ; clk      ; None                        ; None                      ; 3.678 ns                ;
+; N/A                                     ; 255.49 MHz ( period = 3.914 ns )                    ; div_frec:conex1|contador[8]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.675 ns                ;
+; N/A                                     ; 255.69 MHz ( period = 3.911 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[29] ; clk        ; clk      ; None                        ; None                      ; 3.673 ns                ;
+; N/A                                     ; 256.28 MHz ( period = 3.902 ns )                    ; div_frec:conex1|contador[26] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.600 ns                ;
+; N/A                                     ; 256.67 MHz ( period = 3.896 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[16] ; clk        ; clk      ; None                        ; None                      ; 3.657 ns                ;
+; N/A                                     ; 256.81 MHz ( period = 3.894 ns )                    ; div_frec:conex1|contador[13] ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.655 ns                ;
+; N/A                                     ; 256.94 MHz ( period = 3.892 ns )                    ; div_frec:conex1|contador[20] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.653 ns                ;
+; N/A                                     ; 257.20 MHz ( period = 3.888 ns )                    ; div_frec:conex1|contador[20] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.649 ns                ;
+; N/A                                     ; 257.27 MHz ( period = 3.887 ns )                    ; div_frec:conex1|contador[25] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 257.40 MHz ( period = 3.885 ns )                    ; div_frec:conex1|contador[25] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.644 ns                ;
+; N/A                                     ; 257.60 MHz ( period = 3.882 ns )                    ; div_frec:conex1|contador[25] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.641 ns                ;
+; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[28] ; clk        ; clk      ; None                        ; None                      ; 3.643 ns                ;
+; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[30] ; clk        ; clk      ; None                        ; None                      ; 3.643 ns                ;
+; N/A                                     ; 257.80 MHz ( period = 3.879 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.579 ns                ;
+; N/A                                     ; 258.80 MHz ( period = 3.864 ns )                    ; div_frec:conex1|contador[11] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.624 ns                ;
+; N/A                                     ; 259.74 MHz ( period = 3.850 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.550 ns                ;
+; N/A                                     ; 259.88 MHz ( period = 3.848 ns )                    ; div_frec:conex1|contador[25] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.607 ns                ;
+; N/A                                     ; 259.88 MHz ( period = 3.848 ns )                    ; div_frec:conex1|contador[8]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.609 ns                ;
+; N/A                                     ; 259.94 MHz ( period = 3.847 ns )                    ; div_frec:conex1|contador[26] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.606 ns                ;
+; N/A                                     ; 260.08 MHz ( period = 3.845 ns )                    ; div_frec:conex1|contador[26] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.604 ns                ;
+; N/A                                     ; 260.15 MHz ( period = 3.844 ns )                    ; div_frec:conex1|contador[25] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.603 ns                ;
+; N/A                                     ; 260.15 MHz ( period = 3.844 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[29] ; clk        ; clk      ; None                        ; None                      ; 3.607 ns                ;
+; N/A                                     ; 260.21 MHz ( period = 3.843 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[27] ; clk        ; clk      ; None                        ; None                      ; 3.606 ns                ;
+; N/A                                     ; 260.28 MHz ( period = 3.842 ns )                    ; div_frec:conex1|contador[26] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.601 ns                ;
+; N/A                                     ; 260.55 MHz ( period = 3.838 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[26] ; clk        ; clk      ; None                        ; None                      ; 3.601 ns                ;
+; N/A                                     ; 260.76 MHz ( period = 3.835 ns )                    ; div_frec:conex1|contador[0]  ; div_frec:conex1|contador[25] ; clk        ; clk      ; None                        ; None                      ; 3.598 ns                ;
+; N/A                                     ; 260.96 MHz ( period = 3.832 ns )                    ; div_frec:conex1|contador[8]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.593 ns                ;
+; N/A                                     ; 261.03 MHz ( period = 3.831 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[28] ; clk        ; clk      ; None                        ; None                      ; 3.593 ns                ;
+; N/A                                     ; 261.16 MHz ( period = 3.829 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[16] ; clk        ; clk      ; None                        ; None                      ; 3.591 ns                ;
+; N/A                                     ; 261.51 MHz ( period = 3.824 ns )                    ; div_frec:conex1|contador[7]  ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.585 ns                ;
+; N/A                                     ; 262.26 MHz ( period = 3.813 ns )                    ; div_frec:conex1|contador[28] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.511 ns                ;
+; N/A                                     ; 262.61 MHz ( period = 3.808 ns )                    ; div_frec:conex1|contador[26] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.567 ns                ;
+; N/A                                     ; 262.81 MHz ( period = 3.805 ns )                    ; div_frec:conex1|contador[14] ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.566 ns                ;
+; N/A                                     ; 262.88 MHz ( period = 3.804 ns )                    ; div_frec:conex1|contador[26] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.563 ns                ;
+; N/A                                     ; 263.16 MHz ( period = 3.800 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[29] ; clk        ; clk      ; None                        ; None                      ; 3.563 ns                ;
+; N/A                                     ; 263.16 MHz ( period = 3.800 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[27] ; clk        ; clk      ; None                        ; None                      ; 3.563 ns                ;
+; N/A                                     ; 263.23 MHz ( period = 3.799 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|contador[14] ; clk        ; clk      ; None                        ; None                      ; 3.561 ns                ;
+; N/A                                     ; 263.30 MHz ( period = 3.798 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|contador[13] ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 263.30 MHz ( period = 3.798 ns )                    ; div_frec:conex1|contador[11] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.558 ns                ;
+; N/A                                     ; 263.44 MHz ( period = 3.796 ns )                    ; div_frec:conex1|contador[18] ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.558 ns                ;
+; N/A                                     ; 263.57 MHz ( period = 3.794 ns )                    ; div_frec:conex1|contador[9]  ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.555 ns                ;
+; N/A                                     ; 264.13 MHz ( period = 3.786 ns )                    ; div_frec:conex1|contador[12] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.546 ns                ;
+; N/A                                     ; 264.20 MHz ( period = 3.785 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[16] ; clk        ; clk      ; None                        ; None                      ; 3.547 ns                ;
+; N/A                                     ; 264.41 MHz ( period = 3.782 ns )                    ; div_frec:conex1|contador[11] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.542 ns                ;
+; N/A                                     ; 264.48 MHz ( period = 3.781 ns )                    ; div_frec:conex1|contador[21] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.481 ns                ;
+; N/A                                     ; 265.18 MHz ( period = 3.771 ns )                    ; div_frec:conex1|contador[7]  ; div_frec:conex1|contador[31] ; clk        ; clk      ; None                        ; None                      ; 3.534 ns                ;
+; N/A                                     ; 265.67 MHz ( period = 3.764 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[28] ; clk        ; clk      ; None                        ; None                      ; 3.527 ns                ;
+; N/A                                     ; 265.75 MHz ( period = 3.763 ns )                    ; div_frec:conex1|contador[2]  ; div_frec:conex1|contador[26] ; clk        ; clk      ; None                        ; None                      ; 3.526 ns                ;
+; N/A                                     ; 266.10 MHz ( period = 3.758 ns )                    ; div_frec:conex1|contador[28] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.517 ns                ;
+; N/A                                     ; 266.10 MHz ( period = 3.758 ns )                    ; div_frec:conex1|contador[1]  ; div_frec:conex1|contador[25] ; clk        ; clk      ; None                        ; None                      ; 3.521 ns                ;
+; N/A                                     ; 266.10 MHz ( period = 3.758 ns )                    ; div_frec:conex1|contador[16] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.457 ns                ;
+; N/A                                     ; 266.24 MHz ( period = 3.756 ns )                    ; div_frec:conex1|contador[28] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.515 ns                ;
+; N/A                                     ; 266.38 MHz ( period = 3.754 ns )                    ; div_frec:conex1|contador[10] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.515 ns                ;
+; N/A                                     ; 266.45 MHz ( period = 3.753 ns )                    ; div_frec:conex1|contador[28] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.512 ns                ;
+; N/A                                     ; 266.52 MHz ( period = 3.752 ns )                    ; div_frec:conex1|contador[16] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.512 ns                ;
+; N/A                                     ; 266.60 MHz ( period = 3.751 ns )                    ; div_frec:conex1|contador[6]  ; div_frec:conex1|contador[27] ; clk        ; clk      ; None                        ; None                      ; 3.513 ns                ;
+; N/A                                     ; 266.88 MHz ( period = 3.747 ns )                    ; div_frec:conex1|contador[7]  ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.508 ns                ;
+; N/A                                     ; 268.17 MHz ( period = 3.729 ns )                    ; div_frec:conex1|contador[23] ; div_frec:conex1|clk_div      ; clk        ; clk      ; None                        ; None                      ; 3.427 ns                ;
+; N/A                                     ; 268.24 MHz ( period = 3.728 ns )                    ; div_frec:conex1|contador[9]  ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.489 ns                ;
+; N/A                                     ; 268.38 MHz ( period = 3.726 ns )                    ; div_frec:conex1|contador[21] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.487 ns                ;
+; N/A                                     ; 268.53 MHz ( period = 3.724 ns )                    ; div_frec:conex1|contador[21] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.485 ns                ;
+; N/A                                     ; 268.74 MHz ( period = 3.721 ns )                    ; div_frec:conex1|contador[21] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.482 ns                ;
+; N/A                                     ; 268.82 MHz ( period = 3.720 ns )                    ; div_frec:conex1|contador[12] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.480 ns                ;
+; N/A                                     ; 268.82 MHz ( period = 3.720 ns )                    ; div_frec:conex1|contador[5]  ; div_frec:conex1|contador[28] ; clk        ; clk      ; None                        ; None                      ; 3.483 ns                ;
+; N/A                                     ; 268.82 MHz ( period = 3.720 ns )                    ; div_frec:conex1|contador[3]  ; div_frec:conex1|contador[26] ; clk        ; clk      ; None                        ; None                      ; 3.483 ns                ;
+; N/A                                     ; 268.89 MHz ( period = 3.719 ns )                    ; div_frec:conex1|contador[28] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.478 ns                ;
+; N/A                                     ; 269.18 MHz ( period = 3.715 ns )                    ; div_frec:conex1|contador[28] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.474 ns                ;
+; N/A                                     ; 269.40 MHz ( period = 3.712 ns )                    ; div_frec:conex1|contador[9]  ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.473 ns                ;
+; N/A                                     ; 269.76 MHz ( period = 3.707 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|contador[14] ; clk        ; clk      ; None                        ; None                      ; 3.469 ns                ;
+; N/A                                     ; 269.83 MHz ( period = 3.706 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|contador[13] ; clk        ; clk      ; None                        ; None                      ; 3.468 ns                ;
+; N/A                                     ; 269.83 MHz ( period = 3.706 ns )                    ; div_frec:conex1|contador[13] ; div_frec:conex1|contador[21] ; clk        ; clk      ; None                        ; None                      ; 3.466 ns                ;
+; N/A                                     ; 269.98 MHz ( period = 3.704 ns )                    ; div_frec:conex1|contador[12] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.464 ns                ;
+; N/A                                     ; 269.98 MHz ( period = 3.704 ns )                    ; div_frec:conex1|contador[19] ; div_frec:conex1|contador[24] ; clk        ; clk      ; None                        ; None                      ; 3.466 ns                ;
+; N/A                                     ; 270.05 MHz ( period = 3.703 ns )                    ; div_frec:conex1|contador[16] ; div_frec:conex1|contador[18] ; clk        ; clk      ; None                        ; None                      ; 3.463 ns                ;
+; N/A                                     ; 270.42 MHz ( period = 3.698 ns )                    ; div_frec:conex1|contador[16] ; div_frec:conex1|contador[20] ; clk        ; clk      ; None                        ; None                      ; 3.458 ns                ;
+; N/A                                     ; 270.93 MHz ( period = 3.691 ns )                    ; div_frec:conex1|contador[7]  ; div_frec:conex1|contador[30] ; clk        ; clk      ; None                        ; None                      ; 3.454 ns                ;
+; N/A                                     ; 271.15 MHz ( period = 3.688 ns )                    ; div_frec:conex1|contador[10] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.449 ns                ;
+; N/A                                     ; 271.22 MHz ( period = 3.687 ns )                    ; div_frec:conex1|contador[21] ; div_frec:conex1|contador[19] ; clk        ; clk      ; None                        ; None                      ; 3.448 ns                ;
+; N/A                                     ; 271.30 MHz ( period = 3.686 ns )                    ; div_frec:conex1|contador[16] ; div_frec:conex1|contador[22] ; clk        ; clk      ; None                        ; None                      ; 3.446 ns                ;
+; N/A                                     ; 271.44 MHz ( period = 3.684 ns )                    ; div_frec:conex1|contador[4]  ; div_frec:conex1|contador[27] ; clk        ; clk      ; None                        ; None                      ; 3.447 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                              ;                              ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; tsu                                                                                       ;
++-------+--------------+------------+------+-------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                                  ; To Clock ;
++-------+--------------+------------+------+-------------------------------------+----------+
+; N/A   ; None         ; -3.038 ns  ; dir  ; state_machine:conex2|state.seven    ; clk      ;
+; N/A   ; None         ; -3.038 ns  ; dir  ; state_machine:conex2|state.fourteen ; clk      ;
+; N/A   ; None         ; -3.039 ns  ; dir  ; state_machine:conex2|state.thirteen ; clk      ;
+; N/A   ; None         ; -3.040 ns  ; dir  ; state_machine:conex2|state.zero     ; clk      ;
+; N/A   ; None         ; -3.041 ns  ; dir  ; state_machine:conex2|state.four     ; clk      ;
+; N/A   ; None         ; -3.042 ns  ; dir  ; state_machine:conex2|state.two      ; clk      ;
+; N/A   ; None         ; -3.042 ns  ; dir  ; state_machine:conex2|state.one      ; clk      ;
+; N/A   ; None         ; -3.043 ns  ; dir  ; state_machine:conex2|state.three    ; clk      ;
+; N/A   ; None         ; -3.044 ns  ; dir  ; state_machine:conex2|state.eight    ; clk      ;
+; N/A   ; None         ; -3.070 ns  ; dir  ; state_machine:conex2|state.five     ; clk      ;
+; N/A   ; None         ; -3.070 ns  ; dir  ; state_machine:conex2|state.twelve   ; clk      ;
+; N/A   ; None         ; -3.071 ns  ; dir  ; state_machine:conex2|state.nine     ; clk      ;
+; N/A   ; None         ; -3.073 ns  ; dir  ; state_machine:conex2|state.six      ; clk      ;
+; N/A   ; None         ; -3.074 ns  ; dir  ; state_machine:conex2|state.fiveteen ; clk      ;
+; N/A   ; None         ; -3.078 ns  ; dir  ; state_machine:conex2|state.eleven   ; clk      ;
+; N/A   ; None         ; -3.280 ns  ; dir  ; state_machine:conex2|state.ten      ; clk      ;
++-------+--------------+------------+------+-------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------+
+; tco                                                                                       ;
++-------+--------------+------------+-------------------------------------+----+------------+
+; Slack ; Required tco ; Actual tco ; From                                ; To ; From Clock ;
++-------+--------------+------------+-------------------------------------+----+------------+
+; N/A   ; None         ; 16.692 ns  ; state_machine:conex2|state.zero     ; s6 ; clk        ;
+; N/A   ; None         ; 16.658 ns  ; state_machine:conex2|state.eight    ; s6 ; clk        ;
+; N/A   ; None         ; 16.516 ns  ; state_machine:conex2|state.ten      ; s6 ; clk        ;
+; N/A   ; None         ; 16.495 ns  ; state_machine:conex2|state.zero     ; s7 ; clk        ;
+; N/A   ; None         ; 16.461 ns  ; state_machine:conex2|state.eight    ; s7 ; clk        ;
+; N/A   ; None         ; 16.370 ns  ; state_machine:conex2|state.two      ; s6 ; clk        ;
+; N/A   ; None         ; 16.343 ns  ; state_machine:conex2|state.twelve   ; s6 ; clk        ;
+; N/A   ; None         ; 16.319 ns  ; state_machine:conex2|state.ten      ; s7 ; clk        ;
+; N/A   ; None         ; 16.187 ns  ; state_machine:conex2|state.nine     ; s6 ; clk        ;
+; N/A   ; None         ; 16.173 ns  ; state_machine:conex2|state.two      ; s7 ; clk        ;
+; N/A   ; None         ; 16.146 ns  ; state_machine:conex2|state.twelve   ; s7 ; clk        ;
+; N/A   ; None         ; 16.080 ns  ; state_machine:conex2|state.one      ; s6 ; clk        ;
+; N/A   ; None         ; 16.073 ns  ; state_machine:conex2|state.four     ; s6 ; clk        ;
+; N/A   ; None         ; 16.040 ns  ; state_machine:conex2|state.nine     ; s5 ; clk        ;
+; N/A   ; None         ; 15.989 ns  ; state_machine:conex2|state.nine     ; s7 ; clk        ;
+; N/A   ; None         ; 15.933 ns  ; state_machine:conex2|state.one      ; s5 ; clk        ;
+; N/A   ; None         ; 15.886 ns  ; state_machine:conex2|state.zero     ; s5 ; clk        ;
+; N/A   ; None         ; 15.882 ns  ; state_machine:conex2|state.one      ; s7 ; clk        ;
+; N/A   ; None         ; 15.876 ns  ; state_machine:conex2|state.four     ; s7 ; clk        ;
+; N/A   ; None         ; 15.852 ns  ; state_machine:conex2|state.eight    ; s5 ; clk        ;
+; N/A   ; None         ; 15.824 ns  ; state_machine:conex2|state.thirteen ; s6 ; clk        ;
+; N/A   ; None         ; 15.788 ns  ; state_machine:conex2|state.zero     ; s4 ; clk        ;
+; N/A   ; None         ; 15.760 ns  ; state_machine:conex2|state.five     ; s6 ; clk        ;
+; N/A   ; None         ; 15.754 ns  ; state_machine:conex2|state.eight    ; s4 ; clk        ;
+; N/A   ; None         ; 15.710 ns  ; state_machine:conex2|state.ten      ; s5 ; clk        ;
+; N/A   ; None         ; 15.651 ns  ; state_machine:conex2|state.six      ; s6 ; clk        ;
+; N/A   ; None         ; 15.638 ns  ; state_machine:conex2|state.zero     ; s3 ; clk        ;
+; N/A   ; None         ; 15.630 ns  ; state_machine:conex2|state.thirteen ; s7 ; clk        ;
+; N/A   ; None         ; 15.621 ns  ; state_machine:conex2|state.three    ; s6 ; clk        ;
+; N/A   ; None         ; 15.612 ns  ; state_machine:conex2|state.ten      ; s4 ; clk        ;
+; N/A   ; None         ; 15.604 ns  ; state_machine:conex2|state.eight    ; s3 ; clk        ;
+; N/A   ; None         ; 15.598 ns  ; state_machine:conex2|state.zero     ; s1 ; clk        ;
+; N/A   ; None         ; 15.581 ns  ; state_machine:conex2|state.zero     ; s2 ; clk        ;
+; N/A   ; None         ; 15.566 ns  ; state_machine:conex2|state.five     ; s7 ; clk        ;
+; N/A   ; None         ; 15.564 ns  ; state_machine:conex2|state.two      ; s5 ; clk        ;
+; N/A   ; None         ; 15.564 ns  ; state_machine:conex2|state.eight    ; s1 ; clk        ;
+; N/A   ; None         ; 15.547 ns  ; state_machine:conex2|state.eight    ; s2 ; clk        ;
+; N/A   ; None         ; 15.543 ns  ; state_machine:conex2|state.nine     ; s2 ; clk        ;
+; N/A   ; None         ; 15.519 ns  ; state_machine:conex2|state.twelve   ; s5 ; clk        ;
+; N/A   ; None         ; 15.466 ns  ; state_machine:conex2|state.two      ; s4 ; clk        ;
+; N/A   ; None         ; 15.462 ns  ; state_machine:conex2|state.ten      ; s3 ; clk        ;
+; N/A   ; None         ; 15.454 ns  ; state_machine:conex2|state.six      ; s7 ; clk        ;
+; N/A   ; None         ; 15.439 ns  ; state_machine:conex2|state.twelve   ; s4 ; clk        ;
+; N/A   ; None         ; 15.436 ns  ; state_machine:conex2|state.one      ; s2 ; clk        ;
+; N/A   ; None         ; 15.427 ns  ; state_machine:conex2|state.three    ; s7 ; clk        ;
+; N/A   ; None         ; 15.423 ns  ; state_machine:conex2|state.eleven   ; s6 ; clk        ;
+; N/A   ; None         ; 15.422 ns  ; state_machine:conex2|state.ten      ; s1 ; clk        ;
+; N/A   ; None         ; 15.405 ns  ; state_machine:conex2|state.ten      ; s2 ; clk        ;
+; N/A   ; None         ; 15.385 ns  ; state_machine:conex2|state.fourteen ; s6 ; clk        ;
+; N/A   ; None         ; 15.316 ns  ; state_machine:conex2|state.two      ; s3 ; clk        ;
+; N/A   ; None         ; 15.289 ns  ; state_machine:conex2|state.twelve   ; s3 ; clk        ;
+; N/A   ; None         ; 15.285 ns  ; state_machine:conex2|state.nine     ; s4 ; clk        ;
+; N/A   ; None         ; 15.276 ns  ; state_machine:conex2|state.eleven   ; s5 ; clk        ;
+; N/A   ; None         ; 15.276 ns  ; state_machine:conex2|state.two      ; s1 ; clk        ;
+; N/A   ; None         ; 15.259 ns  ; state_machine:conex2|state.two      ; s2 ; clk        ;
+; N/A   ; None         ; 15.249 ns  ; state_machine:conex2|state.four     ; s5 ; clk        ;
+; N/A   ; None         ; 15.249 ns  ; state_machine:conex2|state.twelve   ; s1 ; clk        ;
+; N/A   ; None         ; 15.232 ns  ; state_machine:conex2|state.twelve   ; s2 ; clk        ;
+; N/A   ; None         ; 15.225 ns  ; state_machine:conex2|state.eleven   ; s7 ; clk        ;
+; N/A   ; None         ; 15.188 ns  ; state_machine:conex2|state.fourteen ; s7 ; clk        ;
+; N/A   ; None         ; 15.178 ns  ; state_machine:conex2|state.one      ; s4 ; clk        ;
+; N/A   ; None         ; 15.169 ns  ; state_machine:conex2|state.four     ; s4 ; clk        ;
+; N/A   ; None         ; 15.135 ns  ; state_machine:conex2|state.nine     ; s3 ; clk        ;
+; N/A   ; None         ; 15.115 ns  ; state_machine:conex2|state.fourteen ; s5 ; clk        ;
+; N/A   ; None         ; 15.094 ns  ; state_machine:conex2|state.nine     ; s1 ; clk        ;
+; N/A   ; None         ; 15.028 ns  ; state_machine:conex2|state.one      ; s3 ; clk        ;
+; N/A   ; None         ; 15.019 ns  ; state_machine:conex2|state.four     ; s3 ; clk        ;
+; N/A   ; None         ; 15.007 ns  ; state_machine:conex2|state.fiveteen ; s5 ; clk        ;
+; N/A   ; None         ; 14.995 ns  ; state_machine:conex2|state.seven    ; s6 ; clk        ;
+; N/A   ; None         ; 14.987 ns  ; state_machine:conex2|state.one      ; s1 ; clk        ;
+; N/A   ; None         ; 14.979 ns  ; state_machine:conex2|state.four     ; s1 ; clk        ;
+; N/A   ; None         ; 14.964 ns  ; state_machine:conex2|state.three    ; s5 ; clk        ;
+; N/A   ; None         ; 14.962 ns  ; state_machine:conex2|state.four     ; s2 ; clk        ;
+; N/A   ; None         ; 14.954 ns  ; state_machine:conex2|state.five     ; s5 ; clk        ;
+; N/A   ; None         ; 14.909 ns  ; state_machine:conex2|state.thirteen ; s4 ; clk        ;
+; N/A   ; None         ; 14.845 ns  ; state_machine:conex2|state.five     ; s4 ; clk        ;
+; N/A   ; None         ; 14.827 ns  ; state_machine:conex2|state.six      ; s5 ; clk        ;
+; N/A   ; None         ; 14.809 ns  ; state_machine:conex2|state.thirteen ; s5 ; clk        ;
+; N/A   ; None         ; 14.801 ns  ; state_machine:conex2|state.seven    ; s7 ; clk        ;
+; N/A   ; None         ; 14.779 ns  ; state_machine:conex2|state.eleven   ; s2 ; clk        ;
+; N/A   ; None         ; 14.769 ns  ; state_machine:conex2|state.thirteen ; s3 ; clk        ;
+; N/A   ; None         ; 14.747 ns  ; state_machine:conex2|state.six      ; s4 ; clk        ;
+; N/A   ; None         ; 14.721 ns  ; state_machine:conex2|state.thirteen ; s1 ; clk        ;
+; N/A   ; None         ; 14.708 ns  ; state_machine:conex2|state.thirteen ; s2 ; clk        ;
+; N/A   ; None         ; 14.705 ns  ; state_machine:conex2|state.five     ; s3 ; clk        ;
+; N/A   ; None         ; 14.704 ns  ; state_machine:conex2|state.three    ; s4 ; clk        ;
+; N/A   ; None         ; 14.657 ns  ; state_machine:conex2|state.five     ; s1 ; clk        ;
+; N/A   ; None         ; 14.644 ns  ; state_machine:conex2|state.five     ; s2 ; clk        ;
+; N/A   ; None         ; 14.597 ns  ; state_machine:conex2|state.six      ; s3 ; clk        ;
+; N/A   ; None         ; 14.569 ns  ; state_machine:conex2|state.three    ; s3 ; clk        ;
+; N/A   ; None         ; 14.557 ns  ; state_machine:conex2|state.six      ; s1 ; clk        ;
+; N/A   ; None         ; 14.540 ns  ; state_machine:conex2|state.six      ; s2 ; clk        ;
+; N/A   ; None         ; 14.521 ns  ; state_machine:conex2|state.eleven   ; s4 ; clk        ;
+; N/A   ; None         ; 14.517 ns  ; state_machine:conex2|state.three    ; s1 ; clk        ;
+; N/A   ; None         ; 14.504 ns  ; state_machine:conex2|state.three    ; s2 ; clk        ;
+; N/A   ; None         ; 14.481 ns  ; state_machine:conex2|state.fourteen ; s4 ; clk        ;
+; N/A   ; None         ; 14.371 ns  ; state_machine:conex2|state.eleven   ; s3 ; clk        ;
+; N/A   ; None         ; 14.331 ns  ; state_machine:conex2|state.fourteen ; s3 ; clk        ;
+; N/A   ; None         ; 14.330 ns  ; state_machine:conex2|state.eleven   ; s1 ; clk        ;
+; N/A   ; None         ; 14.324 ns  ; state_machine:conex2|state.seven    ; s5 ; clk        ;
+; N/A   ; None         ; 14.291 ns  ; state_machine:conex2|state.fourteen ; s1 ; clk        ;
+; N/A   ; None         ; 14.274 ns  ; state_machine:conex2|state.fourteen ; s2 ; clk        ;
+; N/A   ; None         ; 14.078 ns  ; state_machine:conex2|state.seven    ; s4 ; clk        ;
+; N/A   ; None         ; 13.987 ns  ; state_machine:conex2|state.fiveteen ; s2 ; clk        ;
+; N/A   ; None         ; 13.943 ns  ; state_machine:conex2|state.seven    ; s3 ; clk        ;
+; N/A   ; None         ; 13.891 ns  ; state_machine:conex2|state.seven    ; s1 ; clk        ;
+; N/A   ; None         ; 13.878 ns  ; state_machine:conex2|state.seven    ; s2 ; clk        ;
+; N/A   ; None         ; 13.757 ns  ; state_machine:conex2|state.fiveteen ; s7 ; clk        ;
+; N/A   ; None         ; 13.241 ns  ; state_machine:conex2|state.fiveteen ; s6 ; clk        ;
++-------+--------------+------------+-------------------------------------+----+------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; th                                                                                              ;
++---------------+-------------+-----------+------+-------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                                  ; To Clock ;
++---------------+-------------+-----------+------+-------------------------------------+----------+
+; N/A           ; None        ; 3.528 ns  ; dir  ; state_machine:conex2|state.ten      ; clk      ;
+; N/A           ; None        ; 3.326 ns  ; dir  ; state_machine:conex2|state.eleven   ; clk      ;
+; N/A           ; None        ; 3.322 ns  ; dir  ; state_machine:conex2|state.fiveteen ; clk      ;
+; N/A           ; None        ; 3.321 ns  ; dir  ; state_machine:conex2|state.six      ; clk      ;
+; N/A           ; None        ; 3.319 ns  ; dir  ; state_machine:conex2|state.nine     ; clk      ;
+; N/A           ; None        ; 3.318 ns  ; dir  ; state_machine:conex2|state.five     ; clk      ;
+; N/A           ; None        ; 3.318 ns  ; dir  ; state_machine:conex2|state.twelve   ; clk      ;
+; N/A           ; None        ; 3.292 ns  ; dir  ; state_machine:conex2|state.eight    ; clk      ;
+; N/A           ; None        ; 3.291 ns  ; dir  ; state_machine:conex2|state.three    ; clk      ;
+; N/A           ; None        ; 3.290 ns  ; dir  ; state_machine:conex2|state.two      ; clk      ;
+; N/A           ; None        ; 3.290 ns  ; dir  ; state_machine:conex2|state.one      ; clk      ;
+; N/A           ; None        ; 3.289 ns  ; dir  ; state_machine:conex2|state.four     ; clk      ;
+; N/A           ; None        ; 3.288 ns  ; dir  ; state_machine:conex2|state.zero     ; clk      ;
+; N/A           ; None        ; 3.287 ns  ; dir  ; state_machine:conex2|state.thirteen ; clk      ;
+; N/A           ; None        ; 3.286 ns  ; dir  ; state_machine:conex2|state.seven    ; clk      ;
+; N/A           ; None        ; 3.286 ns  ; dir  ; state_machine:conex2|state.fourteen ; clk      ;
++---------------+-------------+-----------+------+-------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Oct 09 08:15:53 2015
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off contador_asendente_desendente_fpga -c contador_asendente_desendente_fpga --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "div_frec:conex1|clk_div" as buffer
+Info: Clock "clk" has Internal fmax of 208.68 MHz between source register "div_frec:conex1|contador[0]" and destination register "div_frec:conex1|contador[24]" (period= 4.792 ns)
+    Info: + Longest register to register delay is 4.554 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X11_Y16_N1; Fanout = 3; REG Node = 'div_frec:conex1|contador[0]'
+        Info: 2: + IC(0.360 ns) + CELL(0.495 ns) = 0.855 ns; Loc. = LCCOMB_X11_Y16_N0; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~1'
+        Info: 3: + IC(0.000 ns) + CELL(0.080 ns) = 0.935 ns; Loc. = LCCOMB_X11_Y16_N2; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~3'
+        Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 1.015 ns; Loc. = LCCOMB_X11_Y16_N4; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~5'
+        Info: 5: + IC(0.000 ns) + CELL(0.080 ns) = 1.095 ns; Loc. = LCCOMB_X11_Y16_N6; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~7'
+        Info: 6: + IC(0.000 ns) + CELL(0.080 ns) = 1.175 ns; Loc. = LCCOMB_X11_Y16_N8; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~9'
+        Info: 7: + IC(0.000 ns) + CELL(0.080 ns) = 1.255 ns; Loc. = LCCOMB_X11_Y16_N10; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~11'
+        Info: 8: + IC(0.000 ns) + CELL(0.080 ns) = 1.335 ns; Loc. = LCCOMB_X11_Y16_N12; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~13'
+        Info: 9: + IC(0.000 ns) + CELL(0.174 ns) = 1.509 ns; Loc. = LCCOMB_X11_Y16_N14; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~15'
+        Info: 10: + IC(0.000 ns) + CELL(0.080 ns) = 1.589 ns; Loc. = LCCOMB_X11_Y16_N16; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~17'
+        Info: 11: + IC(0.000 ns) + CELL(0.080 ns) = 1.669 ns; Loc. = LCCOMB_X11_Y16_N18; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~19'
+        Info: 12: + IC(0.000 ns) + CELL(0.080 ns) = 1.749 ns; Loc. = LCCOMB_X11_Y16_N20; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~21'
+        Info: 13: + IC(0.000 ns) + CELL(0.080 ns) = 1.829 ns; Loc. = LCCOMB_X11_Y16_N22; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~23'
+        Info: 14: + IC(0.000 ns) + CELL(0.080 ns) = 1.909 ns; Loc. = LCCOMB_X11_Y16_N24; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~25'
+        Info: 15: + IC(0.000 ns) + CELL(0.080 ns) = 1.989 ns; Loc. = LCCOMB_X11_Y16_N26; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~27'
+        Info: 16: + IC(0.000 ns) + CELL(0.080 ns) = 2.069 ns; Loc. = LCCOMB_X11_Y16_N28; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~29'
+        Info: 17: + IC(0.000 ns) + CELL(0.161 ns) = 2.230 ns; Loc. = LCCOMB_X11_Y16_N30; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~31'
+        Info: 18: + IC(0.000 ns) + CELL(0.080 ns) = 2.310 ns; Loc. = LCCOMB_X11_Y15_N0; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~33'
+        Info: 19: + IC(0.000 ns) + CELL(0.080 ns) = 2.390 ns; Loc. = LCCOMB_X11_Y15_N2; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~35'
+        Info: 20: + IC(0.000 ns) + CELL(0.080 ns) = 2.470 ns; Loc. = LCCOMB_X11_Y15_N4; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~37'
+        Info: 21: + IC(0.000 ns) + CELL(0.080 ns) = 2.550 ns; Loc. = LCCOMB_X11_Y15_N6; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~39'
+        Info: 22: + IC(0.000 ns) + CELL(0.080 ns) = 2.630 ns; Loc. = LCCOMB_X11_Y15_N8; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~41'
+        Info: 23: + IC(0.000 ns) + CELL(0.080 ns) = 2.710 ns; Loc. = LCCOMB_X11_Y15_N10; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~43'
+        Info: 24: + IC(0.000 ns) + CELL(0.080 ns) = 2.790 ns; Loc. = LCCOMB_X11_Y15_N12; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~45'
+        Info: 25: + IC(0.000 ns) + CELL(0.174 ns) = 2.964 ns; Loc. = LCCOMB_X11_Y15_N14; Fanout = 2; COMB Node = 'div_frec:conex1|Add0~47'
+        Info: 26: + IC(0.000 ns) + CELL(0.458 ns) = 3.422 ns; Loc. = LCCOMB_X11_Y15_N16; Fanout = 1; COMB Node = 'div_frec:conex1|Add0~48'
+        Info: 27: + IC(0.858 ns) + CELL(0.178 ns) = 4.458 ns; Loc. = LCCOMB_X12_Y16_N0; Fanout = 1; COMB Node = 'div_frec:conex1|contador~43'
+        Info: 28: + IC(0.000 ns) + CELL(0.096 ns) = 4.554 ns; Loc. = LCFF_X12_Y16_N1; Fanout = 3; REG Node = 'div_frec:conex1|contador[24]'
+        Info: Total cell delay = 3.336 ns ( 73.25 % )
+        Info: Total interconnect delay = 1.218 ns ( 26.75 % )
+    Info: - Smallest clock skew is 0.001 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.858 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'clk'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 32; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.992 ns) + CELL(0.602 ns) = 2.858 ns; Loc. = LCFF_X12_Y16_N1; Fanout = 3; REG Node = 'div_frec:conex1|contador[24]'
+            Info: Total cell delay = 1.628 ns ( 56.96 % )
+            Info: Total interconnect delay = 1.230 ns ( 43.04 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.857 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'clk'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G2; Fanout = 32; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.991 ns) + CELL(0.602 ns) = 2.857 ns; Loc. = LCFF_X11_Y16_N1; Fanout = 3; REG Node = 'div_frec:conex1|contador[0]'
+            Info: Total cell delay = 1.628 ns ( 56.98 % )
+            Info: Total interconnect delay = 1.229 ns ( 43.02 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Micro setup delay of destination is -0.038 ns
+Info: tsu for register "state_machine:conex2|state.seven" (data pin = "dir", clock pin = "clk") is -3.038 ns
+    Info: + Longest pin to register delay is 3.530 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L22; Fanout = 16; PIN Node = 'dir'
+        Info: 2: + IC(1.863 ns) + CELL(0.545 ns) = 3.434 ns; Loc. = LCCOMB_X18_Y13_N0; Fanout = 1; COMB Node = 'state_machine:conex2|Selector7~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 3.530 ns; Loc. = LCFF_X18_Y13_N1; Fanout = 3; REG Node = 'state_machine:conex2|state.seven'
+        Info: Total cell delay = 1.667 ns ( 47.22 % )
+        Info: Total interconnect delay = 1.863 ns ( 52.78 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 6.530 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'clk'
+        Info: 2: + IC(1.168 ns) + CELL(0.879 ns) = 3.073 ns; Loc. = LCFF_X10_Y16_N5; Fanout = 2; REG Node = 'div_frec:conex1|clk_div'
+        Info: 3: + IC(1.861 ns) + CELL(0.000 ns) = 4.934 ns; Loc. = CLKCTRL_G0; Fanout = 16; COMB Node = 'div_frec:conex1|clk_div~clkctrl'
+        Info: 4: + IC(0.994 ns) + CELL(0.602 ns) = 6.530 ns; Loc. = LCFF_X18_Y13_N1; Fanout = 3; REG Node = 'state_machine:conex2|state.seven'
+        Info: Total cell delay = 2.507 ns ( 38.39 % )
+        Info: Total interconnect delay = 4.023 ns ( 61.61 % )
+Info: tco from clock "clk" to destination pin "s6" through register "state_machine:conex2|state.zero" is 16.692 ns
+    Info: + Longest clock path from clock "clk" to source register is 6.530 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'clk'
+        Info: 2: + IC(1.168 ns) + CELL(0.879 ns) = 3.073 ns; Loc. = LCFF_X10_Y16_N5; Fanout = 2; REG Node = 'div_frec:conex1|clk_div'
+        Info: 3: + IC(1.861 ns) + CELL(0.000 ns) = 4.934 ns; Loc. = CLKCTRL_G0; Fanout = 16; COMB Node = 'div_frec:conex1|clk_div~clkctrl'
+        Info: 4: + IC(0.994 ns) + CELL(0.602 ns) = 6.530 ns; Loc. = LCFF_X18_Y13_N9; Fanout = 4; REG Node = 'state_machine:conex2|state.zero'
+        Info: Total cell delay = 2.507 ns ( 38.39 % )
+        Info: Total interconnect delay = 4.023 ns ( 61.61 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 9.885 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X18_Y13_N9; Fanout = 4; REG Node = 'state_machine:conex2|state.zero'
+        Info: 2: + IC(0.893 ns) + CELL(0.516 ns) = 1.409 ns; Loc. = LCCOMB_X16_Y13_N2; Fanout = 2; COMB Node = 'state_machine:conex2|WideOr19~9'
+        Info: 3: + IC(0.554 ns) + CELL(0.545 ns) = 2.508 ns; Loc. = LCCOMB_X15_Y13_N0; Fanout = 8; COMB Node = 'state_machine:conex2|WideOr19'
+        Info: 4: + IC(0.613 ns) + CELL(0.545 ns) = 3.666 ns; Loc. = LCCOMB_X15_Y13_N10; Fanout = 1; COMB Node = 'Deco_4bin_to_7seg_hex:conex3|s6~8'
+        Info: 5: + IC(1.510 ns) + CELL(0.178 ns) = 5.354 ns; Loc. = LCCOMB_X13_Y18_N0; Fanout = 1; COMB Node = 'Deco_4bin_to_7seg_hex:conex3|s6~9'
+        Info: 6: + IC(1.681 ns) + CELL(2.850 ns) = 9.885 ns; Loc. = PIN_F1; Fanout = 0; PIN Node = 's6'
+        Info: Total cell delay = 4.634 ns ( 46.88 % )
+        Info: Total interconnect delay = 5.251 ns ( 53.12 % )
+Info: th for register "state_machine:conex2|state.ten" (data pin = "dir", clock pin = "clk") is 3.528 ns
+    Info: + Longest clock path from clock "clk" to destination register is 6.530 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L1; Fanout = 2; CLK Node = 'clk'
+        Info: 2: + IC(1.168 ns) + CELL(0.879 ns) = 3.073 ns; Loc. = LCFF_X10_Y16_N5; Fanout = 2; REG Node = 'div_frec:conex1|clk_div'
+        Info: 3: + IC(1.861 ns) + CELL(0.000 ns) = 4.934 ns; Loc. = CLKCTRL_G0; Fanout = 16; COMB Node = 'div_frec:conex1|clk_div~clkctrl'
+        Info: 4: + IC(0.994 ns) + CELL(0.602 ns) = 6.530 ns; Loc. = LCFF_X18_Y13_N23; Fanout = 4; REG Node = 'state_machine:conex2|state.ten'
+        Info: Total cell delay = 2.507 ns ( 38.39 % )
+        Info: Total interconnect delay = 4.023 ns ( 61.61 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 3.288 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_L22; Fanout = 16; PIN Node = 'dir'
+        Info: 2: + IC(1.844 ns) + CELL(0.322 ns) = 3.192 ns; Loc. = LCCOMB_X18_Y13_N22; Fanout = 1; COMB Node = 'state_machine:conex2|Selector10~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 3.288 ns; Loc. = LCFF_X18_Y13_N23; Fanout = 4; REG Node = 'state_machine:conex2|state.ten'
+        Info: Total cell delay = 1.444 ns ( 43.92 % )
+        Info: Total interconnect delay = 1.844 ns ( 56.08 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 203 megabytes
+    Info: Processing ended: Fri Oct 09 08:15:53 2015
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

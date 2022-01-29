@@ -1,0 +1,23 @@
+|Contador_v
+clk => cuenta_v[9]~reg0.CLK
+clk => cuenta_v[8]~reg0.CLK
+clk => cuenta_v[7]~reg0.CLK
+clk => cuenta_v[6]~reg0.CLK
+clk => cuenta_v[5]~reg0.CLK
+clk => cuenta_v[4]~reg0.CLK
+clk => cuenta_v[3]~reg0.CLK
+clk => cuenta_v[2]~reg0.CLK
+clk => cuenta_v[1]~reg0.CLK
+clk => cuenta_v[0]~reg0.CLK
+cuenta_v[0] <= cuenta_v[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[1] <= cuenta_v[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[2] <= cuenta_v[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[3] <= cuenta_v[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[4] <= cuenta_v[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[5] <= cuenta_v[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[6] <= cuenta_v[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[7] <= cuenta_v[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[8] <= cuenta_v[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cuenta_v[9] <= cuenta_v[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

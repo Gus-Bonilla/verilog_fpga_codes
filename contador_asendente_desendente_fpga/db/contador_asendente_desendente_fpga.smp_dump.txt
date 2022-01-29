@@ -1,0 +1,19 @@
+
+State Machine - |contador_asendente_desendente_fpga|state_machine:conex2|state
+Name state.fiveteen state.fourteen state.thirteen state.twelve state.eleven state.ten state.nine state.eight state.seven state.six state.five state.four state.three state.two state.one state.zero 
+state.zero 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.one 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.two 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.three 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.four 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.five 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.six 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.seven 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.eight 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.nine 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ten 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.eleven 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.twelve 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.thirteen 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.fourteen 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.fiveteen 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

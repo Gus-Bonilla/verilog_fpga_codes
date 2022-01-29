@@ -1,0 +1,28 @@
+module Contador_letra_vertical (
+input clk,
+output reg clk_vert);
+
+integer contador;
+
+always @(negedge clk)
+begin
+	if(contador==525)
+		begin
+			contador<=1;
+		end
+	else
+		contador<=contador+1;
+		
+end
+
+always @(contador)
+begin
+	if(contador>=0 && contador<=33)
+		begin
+			clk_vert=1'b0;
+		end
+	else
+		clk_vert=1'b1;	
+		
+end
+endmodule

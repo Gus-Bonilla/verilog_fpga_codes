@@ -1,0 +1,20 @@
+module Compuertas (
+
+input a,
+input b,
+
+output s1,
+output s2,
+output s3,
+output s4,
+output s5,
+output s6 ) ;
+
+assign and (s1,a,b);	//assign s1=a&b;
+assign or (s2,a,b);	//assign s2=a|b;
+assign xor (s3,a,b);	//assign s3=a^b;
+assign nand (s4,a,b);	//assign s4=~(a&b);
+assign nor (s5,a,b);	//assign s5=~(a|b);
+assign xnor (s6,a,b);	//assign s6=~(a^b);
+
+endmodule

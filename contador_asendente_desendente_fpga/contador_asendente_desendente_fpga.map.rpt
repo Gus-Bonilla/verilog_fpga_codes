@@ -1,0 +1,336 @@
+Analysis & Synthesis report for contador_asendente_desendente_fpga
+Fri Oct 09 08:15:42 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |contador_asendente_desendente_fpga|state_machine:conex2|state
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: state_machine:conex2
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Oct 09 08:15:42 2015        ;
+; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                      ; contador_asendente_desendente_fpga           ;
+; Top-level Entity Name              ; contador_asendente_desendente_fpga           ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 93                                           ;
+;     Total combinational functions  ; 93                                           ;
+;     Dedicated logic registers      ; 49                                           ;
+; Total registers                    ; 49                                           ;
+; Total pins                         ; 10                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                          ;
++--------------------------------------------------------------+------------------------------------+------------------------------------+
+; Option                                                       ; Setting                            ; Default Value                      ;
++--------------------------------------------------------------+------------------------------------+------------------------------------+
+; Device                                                       ; EP2C20F484C7                       ;                                    ;
+; Top-level entity name                                        ; contador_asendente_desendente_fpga ; contador_asendente_desendente_fpga ;
+; Family name                                                  ; Cyclone II                         ; Stratix II                         ;
+; Use Generated Physical Constraints File                      ; Off                                ;                                    ;
+; Use smart compilation                                        ; Off                                ; Off                                ;
+; Restructure Multiplexers                                     ; Auto                               ; Auto                               ;
+; Create Debugging Nodes for IP Cores                          ; Off                                ; Off                                ;
+; Preserve fewer node names                                    ; On                                 ; On                                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                                ; Off                                ;
+; Verilog Version                                              ; Verilog_2001                       ; Verilog_2001                       ;
+; VHDL Version                                                 ; VHDL93                             ; VHDL93                             ;
+; State Machine Processing                                     ; Auto                               ; Auto                               ;
+; Safe State Machine                                           ; Off                                ; Off                                ;
+; Extract Verilog State Machines                               ; On                                 ; On                                 ;
+; Extract VHDL State Machines                                  ; On                                 ; On                                 ;
+; Ignore Verilog initial constructs                            ; Off                                ; Off                                ;
+; Iteration limit for constant Verilog loops                   ; 5000                               ; 5000                               ;
+; Iteration limit for non-constant Verilog loops               ; 250                                ; 250                                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                                 ; On                                 ;
+; Parallel Synthesis                                           ; Off                                ; Off                                ;
+; DSP Block Balancing                                          ; Auto                               ; Auto                               ;
+; NOT Gate Push-Back                                           ; On                                 ; On                                 ;
+; Power-Up Don't Care                                          ; On                                 ; On                                 ;
+; Remove Redundant Logic Cells                                 ; Off                                ; Off                                ;
+; Remove Duplicate Registers                                   ; On                                 ; On                                 ;
+; Ignore CARRY Buffers                                         ; Off                                ; Off                                ;
+; Ignore CASCADE Buffers                                       ; Off                                ; Off                                ;
+; Ignore GLOBAL Buffers                                        ; Off                                ; Off                                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                                ; Off                                ;
+; Ignore LCELL Buffers                                         ; Off                                ; Off                                ;
+; Ignore SOFT Buffers                                          ; On                                 ; On                                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                                ; Off                                ;
+; Optimization Technique                                       ; Balanced                           ; Balanced                           ;
+; Carry Chain Length                                           ; 70                                 ; 70                                 ;
+; Auto Carry Chains                                            ; On                                 ; On                                 ;
+; Auto Open-Drain Pins                                         ; On                                 ; On                                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                                ; Off                                ;
+; Auto ROM Replacement                                         ; On                                 ; On                                 ;
+; Auto RAM Replacement                                         ; On                                 ; On                                 ;
+; Auto Shift Register Replacement                              ; Auto                               ; Auto                               ;
+; Auto Clock Enable Replacement                                ; On                                 ; On                                 ;
+; Strict RAM Replacement                                       ; Off                                ; Off                                ;
+; Allow Synchronous Control Signals                            ; On                                 ; On                                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                                ; Off                                ;
+; Auto RAM to Logic Cell Conversion                            ; Off                                ; Off                                ;
+; Auto Resource Sharing                                        ; Off                                ; Off                                ;
+; Allow Any RAM Size For Recognition                           ; Off                                ; Off                                ;
+; Allow Any ROM Size For Recognition                           ; Off                                ; Off                                ;
+; Allow Any Shift Register Size For Recognition                ; Off                                ; Off                                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                                 ; On                                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                                ; Off                                ;
+; Timing-Driven Synthesis                                      ; Off                                ; Off                                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                                 ; On                                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                                ; Off                                ;
+; Synchronization Register Chain Length                        ; 2                                  ; 2                                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation                 ; Normal compilation                 ;
+; HDL message level                                            ; Level2                             ; Level2                             ;
+; Suppress Register Optimization Related Messages              ; Off                                ; Off                                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                                ; 100                                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                                ; 100                                ;
+; Clock MUX Protection                                         ; On                                 ; On                                 ;
+; Auto Gated Clock Conversion                                  ; Off                                ; Off                                ;
+; Block Design Naming                                          ; Auto                               ; Auto                               ;
+; SDC constraint protection                                    ; Off                                ; Off                                ;
+; Synthesis Effort                                             ; Auto                               ; Auto                               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                                 ; On                                 ;
+; Analysis & Synthesis Message Level                           ; Medium                             ; Medium                             ;
++--------------------------------------------------------------+------------------------------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                      ;
++--------------------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                                                  ;
++--------------------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ../state_machine/state_machine.v                 ; yes             ; User Verilog HDL File  ; F:/User Gustavo/Documentos/Proyectos Aistente de Diseño Electronico/Quartus_2/Verilog/state_machine/state_machine.v                                           ;
+; ../div_frec/div_frec.v                           ; yes             ; User Verilog HDL File  ; F:/User Gustavo/Documentos/Proyectos Aistente de Diseño Electronico/Quartus_2/Verilog/div_frec/div_frec.v                                                     ;
+; ../Deco_4bin_to_7seg_hex/Deco_4bin_to_7seg_hex.v ; yes             ; User Verilog HDL File  ; F:/User Gustavo/Documentos/Proyectos Aistente de Diseño Electronico/Quartus_2/Verilog/Deco_4bin_to_7seg_hex/Deco_4bin_to_7seg_hex.v                           ;
+; contador_asendente_desendente_fpga.v             ; yes             ; User Verilog HDL File  ; F:/User Gustavo/Documentos/Proyectos Aistente de Diseño Electronico/Quartus_2/Verilog/contador_asendente_desendente_fpga/contador_asendente_desendente_fpga.v ;
++--------------------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 93    ;
+;                                             ;       ;
+; Total combinational functions               ; 93    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 25    ;
+;     -- 3 input functions                    ; 33    ;
+;     -- <=2 input functions                  ; 35    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 62    ;
+;     -- arithmetic mode                      ; 31    ;
+;                                             ;       ;
+; Total registers                             ; 49    ;
+;     -- Dedicated logic registers            ; 49    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 10    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 33    ;
+; Total fan-out                               ; 389   ;
+; Average fan-out                             ; 2.56  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                               ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; |contador_asendente_desendente_fpga ; 93 (0)            ; 49 (0)       ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |contador_asendente_desendente_fpga                              ; work         ;
+;    |Deco_4bin_to_7seg_hex:conex3|   ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_asendente_desendente_fpga|Deco_4bin_to_7seg_hex:conex3 ; work         ;
+;    |div_frec:conex1|                ; 55 (55)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_asendente_desendente_fpga|div_frec:conex1              ; work         ;
+;    |state_machine:conex2|           ; 26 (26)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |contador_asendente_desendente_fpga|state_machine:conex2         ; work         ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |contador_asendente_desendente_fpga|state_machine:conex2|state                                                                                                                                                                ;
++----------------+----------------+----------------+----------------+--------------+--------------+-----------+------------+-------------+-------------+-----------+------------+------------+-------------+-----------+-----------+------------+
+; Name           ; state.fiveteen ; state.fourteen ; state.thirteen ; state.twelve ; state.eleven ; state.ten ; state.nine ; state.eight ; state.seven ; state.six ; state.five ; state.four ; state.three ; state.two ; state.one ; state.zero ;
++----------------+----------------+----------------+----------------+--------------+--------------+-----------+------------+-------------+-------------+-----------+------------+------------+-------------+-----------+-----------+------------+
+; state.zero     ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 0          ;
+; state.one      ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 1         ; 1          ;
+; state.two      ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 1         ; 0         ; 1          ;
+; state.three    ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 1           ; 0         ; 0         ; 1          ;
+; state.four     ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 1          ; 0           ; 0         ; 0         ; 1          ;
+; state.five     ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 1          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.six      ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 1         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.seven    ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 1           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.eight    ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 1           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.nine     ; 0              ; 0              ; 0              ; 0            ; 0            ; 0         ; 1          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.ten      ; 0              ; 0              ; 0              ; 0            ; 0            ; 1         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.eleven   ; 0              ; 0              ; 0              ; 0            ; 1            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.twelve   ; 0              ; 0              ; 0              ; 1            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.thirteen ; 0              ; 0              ; 1              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.fourteen ; 0              ; 1              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
+; state.fiveteen ; 1              ; 0              ; 0              ; 0            ; 0            ; 0         ; 0          ; 0           ; 0           ; 0         ; 0          ; 0          ; 0           ; 0         ; 0         ; 1          ;
++----------------+----------------+----------------+----------------+--------------+--------------+-----------+------------+-------------+-------------+-----------+------------+------------+-------------+-----------+-----------+------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; state_machine:conex2|state~10          ; Lost fanout        ;
+; state_machine:conex2|state~11          ; Lost fanout        ;
+; state_machine:conex2|state~12          ; Lost fanout        ;
+; state_machine:conex2|state~13          ; Lost fanout        ;
+; state_machine:conex2|state~14          ; Lost fanout        ;
+; state_machine:conex2|state~15          ; Lost fanout        ;
+; state_machine:conex2|state~16          ; Lost fanout        ;
+; state_machine:conex2|state~17          ; Lost fanout        ;
+; state_machine:conex2|state~18          ; Lost fanout        ;
+; state_machine:conex2|state~19          ; Lost fanout        ;
+; state_machine:conex2|state~20          ; Lost fanout        ;
+; state_machine:conex2|state~21          ; Lost fanout        ;
+; state_machine:conex2|state~22          ; Lost fanout        ;
+; state_machine:conex2|state~23          ; Lost fanout        ;
+; state_machine:conex2|state~24          ; Lost fanout        ;
+; state_machine:conex2|state~25          ; Lost fanout        ;
+; Total Number of Removed Registers = 16 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: state_machine:conex2 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; zero           ; 0     ; Signed Integer                           ;
+; one            ; 1     ; Signed Integer                           ;
+; two            ; 2     ; Signed Integer                           ;
+; three          ; 3     ; Signed Integer                           ;
+; four           ; 4     ; Signed Integer                           ;
+; five           ; 5     ; Signed Integer                           ;
+; six            ; 6     ; Signed Integer                           ;
+; seven          ; 7     ; Signed Integer                           ;
+; eight          ; 8     ; Signed Integer                           ;
+; nine           ; 9     ; Signed Integer                           ;
+; ten            ; 10    ; Signed Integer                           ;
+; eleven         ; 11    ; Signed Integer                           ;
+; twelve         ; 12    ; Signed Integer                           ;
+; thirteen       ; 13    ; Signed Integer                           ;
+; fourteen       ; 14    ; Signed Integer                           ;
+; fiveteen       ; 15    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Oct 09 08:15:41 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contador_asendente_desendente_fpga -c contador_asendente_desendente_fpga
+Info: Found 1 design units, including 1 entities, in source file ../state_machine/state_machine.v
+    Info: Found entity 1: state_machine
+Info: Found 1 design units, including 1 entities, in source file ../div_frec/div_frec.v
+    Info: Found entity 1: div_frec
+Info: Found 1 design units, including 1 entities, in source file ../Deco_4bin_to_7seg_hex/Deco_4bin_to_7seg_hex.v
+    Info: Found entity 1: Deco_4bin_to_7seg_hex
+Info: Found 1 design units, including 1 entities, in source file contador_asendente_desendente_fpga.v
+    Info: Found entity 1: contador_asendente_desendente_fpga
+Info: Elaborating entity "contador_asendente_desendente_fpga" for the top level hierarchy
+Info: Elaborating entity "div_frec" for hierarchy "div_frec:conex1"
+Info: Elaborating entity "state_machine" for hierarchy "state_machine:conex2"
+Info: Elaborating entity "Deco_4bin_to_7seg_hex" for hierarchy "Deco_4bin_to_7seg_hex:conex3"
+Info: 16 registers lost all their fanouts during netlist optimizations. The first 16 are displayed below.
+    Info: Register "state_machine:conex2|state~10" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~11" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~12" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~13" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~14" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~17" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~18" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~19" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~20" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~21" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~22" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~23" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~24" lost all its fanouts during netlist optimizations.
+    Info: Register "state_machine:conex2|state~25" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file F:/User Gustavo/Documentos/Proyectos Aistente de Diseño Electronico/Quartus_2/Verilog/contador_asendente_desendente_fpga/contador_asendente_desendente_fpga.map.smsg
+Info: Implemented 103 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 7 output pins
+    Info: Implemented 93 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 241 megabytes
+    Info: Processing ended: Fri Oct 09 08:15:42 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/User Gustavo/Documentos/Proyectos Aistente de Diseño Electronico/Quartus_2/Verilog/contador_asendente_desendente_fpga/contador_asendente_desendente_fpga.map.smsg.
+
+

@@ -1,0 +1,5 @@
+module Not_1 (
+input a,
+output s);
+assign s=!a;
+endmodule 

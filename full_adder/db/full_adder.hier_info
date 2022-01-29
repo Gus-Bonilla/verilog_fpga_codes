@@ -1,0 +1,13 @@
+|full_adder
+a => co~1.IN0
+a => co~0.IN0
+a => WideXor0.IN0
+b => co~1.IN1
+b => co~0.IN1
+b => WideXor0.IN1
+ci => co~2.IN0
+ci => WideXor0.IN2
+s <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+co <= co~3.DB_MAX_OUTPUT_PORT_TYPE
+
+
